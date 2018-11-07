@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML TEST</title>
+</head>
+<body>
+    <h1>Lorem</h1>
+    <h2>Lorem ipsum.</h2>
+    <h3>Lorem ipsum dolor</h3>
+    <P>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id maxime corrupti, corrupti, nulla earum possimus vitae
+        omnis odio pariatur officia! Odit ipsa alia labore nostrum sint ex non repellendus, doloremque et.
+    </P>
+    <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipli quaerar sint commodu est itaque vero, incidunt, quisquam obcaecati iusto minus inventore voluptatum.
+        Consequuntur, at sequi ut nihil fugit amet possimus.
+    </P>
+    <p>
+        <a href="https://www.jd.com/" target="_blank">在新窗口打开京东</a>
+        <a href="mailto:1393195408@qq.com">点击给我发邮件</a>
+        <a href="#foot">跳转到本页的底部</a> <!--页内跳转-->
+        <a href="https://drscdn.500px.org/photo/229389427/m%3D1170/v2?user_id=7012987&webp=true&sig=196fa0c161aa562478d08571764872f7d69a346c3c0b2e12aa00e2c6414eb28b" download="image">点我可以下载一个文件</a> <!--点击下载文件-->
+        <br/>
+        <img src="https://drscdn.500px.org/photo/229389427/m%3D1170/v2?user_id=7012987&webp=true&sig=196fa0c161aa562478d08571764872f7d69a346c3c0b2e12aa00e2c6414eb28b" width="250px" height="300px" alt="a photo">
+        <hr>
+        <hr>
+    </p>
+    <marquee behavior="scroll">飘~~~</marquee>
+    <em>这几种强调</em><strong>有什么区别呢？</strong><!--写错了--><u>这个呢？</u><i>这个呢？</i> <br/>
+    <a>&lt;!--这段注释需要出现在页面里面--&gt;</a>
+    <p>
+        html的注释怎么写？
+    </p>
+    <p>
+        下面是一段javascript代码，最适合用何种标签表示呢？
+    <p>
+        <pre>
+            function a(){
+                return 8;
+            }
+        </pre>
+    </p>
+        
+    </p>
+    <hr/>
+    <ul>
+        <li>小学
+            <ol>
+                <li>一年级
+                    <ol>
+                        <li>上学期</li>
+                        <li>下学期</li>
+                    </ol>
+                </li>
+                <li>二年级</li>
+                <li>三年级</li>
+            </ol>
+        </li>
+        <li>中学</li>
+        <li>大学</li>
+    </ul>
+    <hr/>
+    <p>
+      <dt>班级</dt>
+      <dd>三年二班</dd>
+      <dt>老师</dt>
+      <dd>张老师</dd>
+      <dd>李老师</dd>
+      <dd>王老师</dd>
+      <dt>学生</dt>
+      <dd>小明</dd>
+      <dd>豆豆</dd>
+
+    </p>
+    <hr>
+    <h2>Google搜索</h2>
+    <form action="https://www.google.com/search">
+        <input type="text" name="q"  placeholder="请输入想要搜索的内容" value="">
+        <input type="submit" value="在新窗口打开搜索结果">
+    </form>
+    <hr>
+    <!--以下是表单部分--><!--需要注意对定义属性的运用-->
+    <div>
+        <p>个人信息调查表</p>
+        <form action="#">
+            <dt>性别</dt>
+            <dd>
+                <input type="radio" name="sex" value="male">男 <input type="radio" name="sex" value="female">女
+            </dd>
+            
+            <dt>年龄</dt>
+            <dd>
+                <select name="age">
+                    <option selected hidden>请选择</option>
+                    <optgroup label="少年">
+                        <option value="six">1-6岁</option>
+                        <option value="twelve">6-12岁</option>
+                    </optgroup>
+                    <optgroup label="青年">
+                        <option value="fifteen">13-15岁</option>
+                        <option value="eighteen">15-18岁</option>
+                    </optgroup>
+                    <optgroup label="壮年">
+                        <option value="twenty-two">18-22岁</option>
+                        <option value="thirty">23-30岁</option>
+                    </optgroup>
+                </select>
+            </dd>
+            <dt>生日</dt>
+            <dd>
+                <input type="date" name="birthday" value="">
+            </dd>
+            <dt>生辰</dt>
+            <dd>
+                <input type="time" name="birthtime" value="">
+            </dd>
+            <dt>照片</dt>
+            <dd>
+                <label for="photo">点我上传照片，我比文件上传按钮好看</label>
+                <input type="file" accept="image/*" name="photo" value="" hidden id="photo"><!--label标签与input标签的结合运用-->
+            </dd>
+            <dt>肤色</dt>
+            <dd>
+                <input type="color" name="color">
+            </dd>
+            <dt>自我介绍</dt>
+            <dd>
+                <textarea rows="10" cols="30" >&lt;/textarea&gt;</textarea>
+            </dd> 
+            <fieldset>
+                <legend>这里面的全都禁用了</legend>
+                <input type="text" disabled> <input type="text" disabled> <input type="text" disabled> <input type="text" disabled>
+            </fieldset>
+            <input type="submit"> <input type="reset">
+        </form>
+    </div>
+    <hr>
+    <!--以下是表格部分-->
+    <table border="1">
+        <caption>货品列表</caption>
+        <thead>
+            <th>编号</th>
+            <th bgcolor="red">品名</th>
+            <th>进价</th>
+            <th>出价</th>
+        </thead>
+        <tbody>
+            <tr>
+                <th>001</th>
+                <td bgcolor="red">苹果</td>
+                <td rowspan="2">5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <th>001</th>
+                <td bgcolor="red">桔子</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <th>001</th>
+                <td bgcolor="red">香蕉</td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <th>001</th>
+                <td bgcolor="red">山竹</td>
+                <td>5</td>
+                <td>8</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <!--以下是img和map的结合使用部分-->
+    <img src="https://drscdn.500px.org/photo/174778125/m%3D1170_k%3D1/2841ccf2a3720e8e794a6a6930f6ff2c" width="300px" height="500px" usemap="#maplink" alt="coffee">
+    <map name="maplink">
+        <area shape="circle" coords="160,130,60" href="#" title="abc" alt="circle link">
+        <area shape="rect" coords="60,210,200,325" href="https://www.mi.com/" title="abc" alt="rect link">
+        <area shape="poly" coords="57,92,28,306,171,430,259,303,200,108" href="#" title="image title" alt="poly link">
+    </map>
+    <hr>
+    <!--以下是frame部分-->
+    <a href="https://www.mi.com/" target="frame">点击我会在下面的frame里打开小米商场，但为什么打不开呢?</a><br><!--对target属性、scrolling属性的运用-->
+    <iframe src="https://nodejs.org/en/" name="frame" width="400px" height="150px" scrolling="yes" ></iframe>
+    <div id="foot">
+        怎样&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在这两个字之间空这么大呢？<br>
+怎样在页面中显示下面的内容呢？<br>
+&lt;span&gt;&lt;/span&gt;
+    </div>
+</body>
+</html> 
