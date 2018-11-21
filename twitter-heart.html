@@ -34,13 +34,49 @@
         .bgc:hover{
             background-position: -2800px 0px; 
         }
-        
+        /* 以下为使用 `：target`伪类选择器实现图片轮播的方法 */
+        div#heart{
+            width: 100px;
+            height: 100px;
+            background-image: url(https://abs.twimg.com/a/1542244373/img/animations/web_heart_animation_edge.png);
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            /* 结合使用background-image/background-repeat/background-position属性 */
+        }
+        .a1{
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        /* display:block; width: 100%; height: 100%; 这一条属性会使得链接区域铺满整个div */
+        .a2{
+            display: none;
+            width: 100%;
+            height: 100%;
+        }
+        /* 当background-image区域被点击时，区域会执行下面的样式规则 */
+        #heart:target{   
+            background-position: -2800px 0px;
+            transition: background-position 2s steps(28);
+        }
+        #heart:target>.a1{
+            display: none;
+        }
+        #heart:target>.a2{
+            display: block;
+        }
+
     </style>
 </head>
 <body>
     <div class="twitter">
         <div class="content"><img src="https://pbs.twimg.com/card_img/1064866808119754757/I55csRBr?format=jpg&name=600x314" alt="billboard picture"></div>
         <div class="bgc"></div>
+    </div>
+    <!-- 以下为使用target伪类选择器的结构 -->
+    <div id="heart">
+        <a href="#heart" class="a1"></a>
+        <a href="" class="a2"></a>
     </div>
 </body>
 </html>

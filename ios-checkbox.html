@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IOS-Checkbox</title>
+    <style>
+        /* 设置条框的样式，使用border-radius属性使左右两边呈圆角 */
+        .box{
+        width: 200px;
+        height: 110px;
+        background-color: #dddddd;
+        border-radius:60px;
+        position: relative;
+        box-shadow: #dddddd 0 0 5px;
+        }
+        /* 设置浮动圆框的样式，当width=height ，且 border-radius:50% 时，可作出一个圆 */
+        label{
+        width: 100px;
+        height: 100px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        position: absolute;
+        top:5px;
+        left:10px;
+        transition: left 1s;
+        }
+        /* 设置当CheckBox被选中后的效果 */
+        input:checked+div{
+        background-color: #6edd5e;
+        box-shadow:#dddddd 0 0 5px inset;
+        }
+        /* 设置向左浮动 */
+        input:checked+div>label{
+        left:80px;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" hidden name="check" value="yes" id="ios">
+    <div class="box">
+    <label for="ios"></label>
+    </div>
+</body>
+</html>

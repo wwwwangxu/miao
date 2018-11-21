@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RADIO-SLIDER</title>
+    <style>
+        html,body{
+            width: 100%;
+        }
+        #box1{
+            position: relative;
+            text-align: center;   
+        }
+        /*  text-align: center; 使行内元素水平居中 */
+        #box1 img{
+            width:1000px;
+            position: absolute;
+            top: 30px;
+            left: 0; 
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0; 
+        }
+
+        #box1 input:checked+img{
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">
+    <form action="">
+    <input type="radio" name="slider" value="mi1" id="mi1" checked="check">
+        <img src="https://i1.mifile.cn/a4/xmad_1542593050318_TVIrS.jpg
+      " alt="">
+    <input type="radio" name="slider" value="mi2" id="mi2">
+        <img src="https://i1.mifile.cn/a4/xmad_15410029988871_TdzPQ.jpg
+      " alt="">
+    <input type="radio" name="slider" value="mi3" id="mi3">
+        <img src="https://i1.mifile.cn/a4/xmad_1542718183295_gZCXT.jpg
+      " alt="">
+    <input type="radio" name="slider" value="mi4" id="mi4">
+        <img src="https://i1.mifile.cn/a4/xmad_15427030629034_vRria.jpg
+      " alt="">  
+    <input type="radio" name="slider" value="mi5" id="mi5">      
+        <img src="https://i1.mifile.cn/a4/xmad_15427624932575_mcJkj.jpg
+      " alt="">
+    </form>
+  </div>
+</body>
+</html>
