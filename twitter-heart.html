@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Twitter-heart</title>
+    <style>
+        .twitter{
+            position: relative;
+            border: 1px solid;
+            width: 550px;
+            height: 450px;
+        }
+        .content img{
+            width: 500px;
+            height: 340px;
+            position: absolute;
+            top: 10px;
+            left: 25px;
+        }   
+
+        .bgc{
+            position: absolute;
+            left: 200px;
+            bottom:0px;
+            background-image: url(https://abs.twimg.com/a/1542244373/img/animations/web_heart_animation_edge.png);
+            background-repeat: no-repeat;
+            background-position: -0px 0px; 
+            width:100px;
+            height: 100px;
+            transition: background-position 1s steps(28);
+        }
+        .bgc:hover{
+            background-position: -2800px 0px; 
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="twitter">
+        <div class="content"><img src="https://pbs.twimg.com/card_img/1064866808119754757/I55csRBr?format=jpg&name=600x314" alt="billboard picture"></div>
+        <div class="bgc"></div>
+    </div>
+</body>
+</html>

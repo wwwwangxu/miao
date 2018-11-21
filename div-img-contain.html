@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Img-contain</title>
+    <style>
+        .box1 img{
+            width: 300px;
+            height: 300px;
+            border: 1px solid;
+            object-fit: contain;
+        }
+        .box2{
+            width: 300px;
+            height: 300px;
+            border: 1px solid;
+            font-size: 0;
+            text-align: center;
+            line-height: 300px;
+        }
+        .box2 img{
+            width: 300px;
+            vertical-align: middle;
+        }
+        .box3{
+            width: 300px;
+            height: 300px;
+            border: 1px solid;
+            position: relative;
+            top: 5px;
+        }
+        .box3 img{
+            width: 300px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzWATmV4b_AKP216eChZ56k6Vha-9SOOtrOXiwNQJ8Vn219Xpf" alt="testimg"></div>
+    <div class="box2"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzWATmV4b_AKP216eChZ56k6Vha-9SOOtrOXiwNQJ8Vn219Xpf" alt="testimg"></div>
+    <div class="box3"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzWATmV4b_AKP216eChZ56k6Vha-9SOOtrOXiwNQJ8Vn219Xpf" alt="testimg"></div>
+</body>
+</html>
