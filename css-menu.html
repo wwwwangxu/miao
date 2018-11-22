@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS-MENU</title>
+    <style>
+        ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        /* 取消列表项标志 */
+
+        li{
+            cursor: pointer;
+        }
+        /* 设置光标样式 */
+
+        .menu{
+            width: 600px;
+            height: 40px;
+            background-color: #444;
+            color: #cdcdcd;
+            position: relative;
+            text-align: center;
+            line-height: 40px;
+        }
+        /* 为主菜单栏设置样式并定位，使子菜单有所参考 */
+
+        .menu ul ul{
+            display: none;
+        }
+        li:hover > ul{
+            display: block;
+        }
+        /* 隐藏子菜单栏 */
+
+        .first > li{
+            padding-left: 30px;
+            padding-right: 30px;
+            display: inline-block;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+        /* 主菜单栏设置为水平排列 */
+
+        .first > li:hover{
+            background-color: #555;
+        }
+        /* 
+        *设置光标悬停在主菜单列表项时，列表项的背景色 
+        *如何设置在光标从主菜单列表项转移到子菜单上时，主菜单列表项背景色恢复
+        */
+
+        .second{
+            color: black;
+            background-color: #ffffff;
+            position: absolute;
+            top: 40px;
+            left: 0;
+        }
+        /* 设置二级菜单的样式，使其定位到相应位置 */
+
+        .second > li{
+            padding-left: 30px;
+            padding-right: 30px;
+            position: relative;
+        }
+        .second > li:hover{
+            background-color: #f1f1f1;
+            color: #ff6000;
+        }
+        /* 设置二级菜单的列表项样式 */
+
+
+        .third{
+            color: black;
+            background-color: #ffffff;
+            position: absolute;
+            top: 0;
+            left: 100%;
+        }
+
+        .third > li{
+            padding: 0 30px;
+            white-space: nowrap;
+            position: relative;
+        } 
+
+        .third> li:hover{
+            background-color: #f1f1f1;
+            color: #ff6000;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="menu">
+      <ul class="first">
+        <li><span>编辑</span>
+                <ul class="second">
+                  <li><span>撤销</span>
+                          <ul class="third">
+                            <li>撤销所有更改</li>
+                            <li>撤销上一步</li>
+                          </ul>
+                  </li>
+                  <li><span>恢复</span>
+                          <ul class="third">
+                            <li>恢复全部</li>
+                            <li>恢复上一步</li>
+                          </ul>
+                  </li>
+                   <li><span>查找</span></li>
+                   <li><span>替换</span></li>
+                </ul>
+        </li>
+        <li><span>选择</span></li>
+        <li><span>查看</span>
+                <ul class="second">
+                  <li><span>外观</span>
+                          <ul class="third">
+                            <li><span>放大</span></li>
+                            <li><span>缩小</span></li>
+                          </ul>
+                  </li>
+                  <li><span>布局</span>
+                          <ul class="third">
+                            <li><span>向左拆分</span></li>
+                            <li><span>向右拆分</span></li>
+                          </ul>
+                  </li>
+                </ul>
+        </li>
+        <li><span>调试</span></li>
+        <li><span>帮助</span>
+                <ul class="second">
+                  <li><span>提示</span>
+                          <ul class="third">
+                            <li><span>入门视频</span></li>
+                            <li><span>交互式演练场</span></li>
+                          </ul>
+                  </li>
+                  <li><span>技巧</span>
+                          <ul class="third">
+                            <li><span>快捷键</span></li>
+                            <li><span>发行说明</span></li>
+                          </ul>
+                  </li>
+                  <li><span>互动</span>
+                          <ul class="third">
+                            <li><span>Twitter</span></li>
+                            <li><span>Facebook</span></li>
+                            <li><span>Instagram</span></li>
+                          </ul>
+                  </li>
+                </ul>
+        </li>
+      </ul>
+    </div>
+</body>
+</html>
