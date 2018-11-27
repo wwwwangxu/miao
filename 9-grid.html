@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>九宫格</title>
+    <style>
+        span{
+            display: table-cell;
+            width: 200px;
+            height: 100px;
+            background-color: #209030;
+            font-size: 14px;
+            transition: font-size 10s;
+            border-bottom: solid 5px red;
+            vertical-align: bottom;
+            padding-left: 15px; 
+            cursor: pionter;
+        }
+        span:hover{
+            font-size: 46px;
+            background-color: #a0d0e0;
+        }
+
+            /* 以上是实现文本字体逐渐变大的效果的CSS代码，主要运用table-cell中的vertical-align: bottom;
+            可将文本与底栏对齐的规则 */
+
+            /* 以下是实现九宫格效果的代码 */
+
+        *{
+            box-sizing: border-box;
+        }
+        .grid1{
+            width: 200px;
+            height:200px;
+            border: 1px solid;
+            margin-top: 50px;
+            margin-left: 50px;
+            position: relative;
+        }
+        .grid1 ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 140px;
+            height: 140px;
+            position: absolute;
+            top: 10px;
+            left: 35px;
+        }
+        .grid1 ul li{
+            width: 50px;
+            height: 50px;
+            border: 5px solid blue;
+            float: left;
+            text-align: center;
+            line-height: 40px;
+            margin-bottom: -5px;
+            margin-left: -5px;
+        }
+        .grid1 li:hover{
+            border-color: red;
+            position: relative;
+        }
+        p:last-child{
+            margin: 0;
+            font-size: 14px;
+            position: absolute;
+            bottom: 5px;
+            width: 200px;
+            padding: 0 10px;
+            text-align: center;
+        }
+
+        .grid2{
+            width: 200px;
+            height:200px;
+            border: 1px solid;
+            margin-top: 50px;
+            margin-left: 50px;
+            position: relative;
+            font-size: 0;
+        }
+        .box2{
+            border: 2.5px solid blue;
+            width: 140px;
+            height: 140px;
+            position: absolute;
+            top: 10px;
+            left: 30px;
+        }
+        .box2>div{
+            border: 2.5px solid blue;
+            width: 45px;
+            height: 45px;
+            display: inline-block;
+            font-size: initial;
+            text-align: center;
+            line-height: 40px;
+        }
+        .box2>div:hover{
+            border-color: red;
+            box-shadow: 0 0 0 2.5px red;
+            position: relative;
+        }
+
+
+        .grid3{
+            width: 200px;
+            height:200px;
+            border: 1px solid;
+            margin-top: 50px;
+            margin-left: 50px;
+            position: relative;
+        }
+        .box3{
+            border: 2.5px solid blue;
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            display: table;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        div.col{
+            display: table-column;
+            border: 5px solid blue;
+        }
+        div.trow{
+            display: table-row;
+            border: 5px solid blue;
+        }
+        .trow div{
+            display: table-cell;
+            width: 45px;
+            height: 45px;
+            vertical-align: middle;
+        }
+        .trow>div:hover{
+            border: 5px solid red;
+        }
+
+
+        .grid4{
+            width: 200px;
+            height:200px;
+            border: 1px solid;
+            margin-top: 50px;
+            margin-left: 50px;
+            position: relative;
+        }
+        ul.box4{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+        ul.box4 li{
+            border: 5px solid blue;
+            width: 50px;
+            height: 50px;
+            box-sizing: border-box;
+            margin-bottom: -5px;
+            text-align: center;
+            line-height: 40px;
+        }
+        ul.box4 li:nth-child(n+4){
+            margin-left: 45px;
+        }
+        ul.box4 li:nth-child(n+7){
+            margin-left: 90px;
+        }
+        ul.box4 li:nth-child(3n+4){
+            margin-top: -140px;
+        }
+        ul.box4 li:hover{
+            border-color: red;
+            position: relative;
+        }
+
+    </style>
+</head>
+<body>
+<div class="homework">
+
+    <span>订阅博客</span>
+    
+    <!-- 以上是实现“订阅博客”效果的结构部分 -->
+    
+    <div class="grid1">
+        <ul class="box1">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        </ul>
+        <p>一、用列表结构及浮动布局实现九宫格</p>
+    </div>
+    
+    <div class="grid2">
+        <div class="box2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        </div>
+        <p>二、用 'inline-block' 方法实现九宫格</p>
+    </div>
+    
+    <div class="grid3">
+        <div class="box3">
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="trow">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+            </div>
+            <div class="trow">
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+            </div>
+            <div class="trow">
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+            </div>
+        </div>
+        <p>三、用表格方式实现九宫格</p>
+    </div>
+    
+    <div class="grid4">
+        <ul class="box4">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        </ul>
+        <p>四、用列表结构及改变 margin 实现九宫格</p>
+    </div>
+   
+    </div>
+</body>
+</html>

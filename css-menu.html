@@ -29,12 +29,24 @@
         /* 为主菜单栏设置样式并定位，使子菜单有所参考 */
 
         .menu ul ul{
-            display: none;
+            visibility: hidden;
+            height: 0;
+            transition: visibility 0.1s; 
+        
         }
-        li:hover > ul{
-            display: block;
+        li:hover > ul,li:hover .third::before{
+            visibility: visible;
+            height: auto;
         }
-        /* 隐藏子菜单栏 */
+        /* 隐藏子菜单栏，并通过visibility设置延迟缓动 */
+
+        ul.third::before{
+            content: '>';
+            position: absolute;
+            right: 100%; 
+        
+        }
+        /* 设置菜单导航标志 */
 
         .first > li{
             padding-left: 30px;
@@ -51,7 +63,7 @@
         }
         /* 
         *设置光标悬停在主菜单列表项时，列表项的背景色 
-        *如何设置在光标从主菜单列表项转移到子菜单上时，主菜单列表项背景色恢复
+        *如何设置在光标从主菜单列表项转移到子菜单上时，主菜单列表项背景色恢复?
         */
 
         .second{
@@ -82,7 +94,6 @@
             top: 0;
             left: 100%;
         }
-
         .third > li{
             padding: 0 30px;
             white-space: nowrap;
@@ -93,6 +104,9 @@
             background-color: #f1f1f1;
             color: #ff6000;
         }
+        /* 设置三级菜单栏及其列表项的样式 */
+
+
 
     </style>
 </head>

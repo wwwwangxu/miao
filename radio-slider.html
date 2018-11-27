@@ -28,27 +28,195 @@
         #box1 input:checked+img{
             opacity: 1;
         }
+        /* 以上是通过opacity属性实现图片浮现的样式 */
+        
+        /* 以下是实现图片侧滑出现的样式 */
+        .slider{
+            width: 300px;
+            height: 420px;
+            position: absolute;
+            top: 500px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            overflow: hidden;
+            border: 1px solid;
+        }
+
+        .slider input{
+            display: none;
+        }
+
+        .main{
+            width: 1200px;
+            height: 420px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .miui:nth-child(1){
+            width: 300px;
+            height: 420px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .miui:nth-child(2){
+            width: 300px;
+            height: 420px;
+            position: absolute;
+            top: 0;
+            left: 300px;
+        }
+        .miui:nth-child(3){
+            width: 300px;
+            height: 420px;
+            position: absolute;
+            top: 0;
+            left: 600px;
+        }
+        .miui:nth-child(4){
+            width: 300px;
+            height: 420px;
+            position: absolute;
+            top: 0;
+            left: 900px;
+        }
+        .miui img{
+            width: 300px;
+            height: 420px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .button label{
+            width: 0;
+            height: 0;
+            margin: 0 5px;
+            display: inline-block;
+            border: 4px solid black;
+            border-radius: 50%;
+        }
+        .button{
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            width: 96px;
+            margin: auto;
+            text-align: center;
+        }
+
+        input:nth-child(1):checked ~ div.button > label:nth-child(1),
+        input:nth-child(2):checked ~ div.button > label:nth-child(2),
+        input:nth-child(3):checked ~ div.button > label:nth-child(3),
+        input:nth-child(4):checked ~ div.button > label:nth-child(4){
+            border-color: #fff;
+            box-shadow: #ff6701 0 0 10px;
+            zoom: 1.2;
+    }
+
+        input:nth-child(1):checked ~ .main{
+            left: 0px;
+            transition: left .5s;
+        }
+        input:nth-child(2):checked ~ .main{
+            left: -300px;
+            transition: left .5s;
+        }
+        input:nth-child(3):checked ~ .main{
+            left: -600px;
+            transition: left .5s;
+        }
+        input:nth-child(4):checked ~ .main{
+            left: -900px;
+            transition: left .5s;
+        }
+
+        .miui label{
+            display: inline-block;
+            width: 20px;
+            height: 48px;
+            background-color: rgba(0,0,0,0.09);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            z-index:5;
+            text-align: center;
+            line-height: 48px;
+        }
+        .miui label:nth-child(2){
+            right: 0;
+        }
+
     </style>
 </head>
 <body>
     <div id="box1">
-    <form action="">
-    <input type="radio" name="slider" value="mi1" id="mi1" checked="check">
-        <img src="https://i1.mifile.cn/a4/xmad_1542593050318_TVIrS.jpg
-      " alt="">
-    <input type="radio" name="slider" value="mi2" id="mi2">
-        <img src="https://i1.mifile.cn/a4/xmad_15410029988871_TdzPQ.jpg
-      " alt="">
-    <input type="radio" name="slider" value="mi3" id="mi3">
-        <img src="https://i1.mifile.cn/a4/xmad_1542718183295_gZCXT.jpg
-      " alt="">
-    <input type="radio" name="slider" value="mi4" id="mi4">
-        <img src="https://i1.mifile.cn/a4/xmad_15427030629034_vRria.jpg
-      " alt="">  
-    <input type="radio" name="slider" value="mi5" id="mi5">      
-        <img src="https://i1.mifile.cn/a4/xmad_15427624932575_mcJkj.jpg
-      " alt="">
-    </form>
-  </div>
+        <form action="">
+        <input type="radio" name="slider" value="mi1" id="mi1" checked="check">
+            <img src="https://i1.mifile.cn/a4/xmad_1542593050318_TVIrS.jpg
+        " alt="">
+        <input type="radio" name="slider" value="mi2" id="mi2">
+            <img src="https://i1.mifile.cn/a4/xmad_15410029988871_TdzPQ.jpg
+        " alt="">
+        <input type="radio" name="slider" value="mi3" id="mi3">
+            <img src="https://i1.mifile.cn/a4/xmad_1542718183295_gZCXT.jpg
+        " alt="">
+        <input type="radio" name="slider" value="mi4" id="mi4">
+            <img src="https://i1.mifile.cn/a4/xmad_15427030629034_vRria.jpg
+        " alt="">  
+        <input type="radio" name="slider" value="mi5" id="mi5">      
+            <img src="https://i1.mifile.cn/a4/xmad_15427624932575_mcJkj.jpg
+        " alt="">
+        </form>
+    </div>
+    <!-- 以上为实现图片浮现的HTML结构 -->
+
+    <!-- 以下为实现图片侧滑出现的HTML结构 -->
+    <div class="slider">
+        <input type="radio" name="miui" id="mi1" checked="check">
+        <input type="radio" name="miui" id="mi2">
+        <input type="radio" name="miui" id="mi3">
+        <input type="radio" name="miui" id="mi4">
+        
+        <div class="main">
+          
+          <div class="miui">
+            <label for="">&lt;</label>
+            <label for="mi2">&gt;</label>
+            <img src="https://i1.mifile.cn/a4/xmad_1542593050318_TVIrS.jpg" alt="">
+          </div>
+          
+          <div class="miui">
+            <label for="mi1">&lt;</label>
+            <label for="mi3">&gt;</label>
+            <img src="https://i1.mifile.cn/a4/xmad_15410029988871_TdzPQ.jpg" alt="">
+          </div>
+          
+          <div class="miui">
+            <label for="mi2">&lt;</label>
+            <label for="mi4">&gt;</label>
+            <img src="https://i1.mifile.cn/a4/xmad_1542718183295_gZCXT.jpg" alt="">
+          </div>
+          
+          <div class="miui">
+            <label for="mi3">&lt;</label>
+            <label for="">&gt;</label>
+            <img src="https://i1.mifile.cn/a4/xmad_15427030629034_vRria.jpg" alt="">
+          </div>
+        </div>
+        
+        <div class="button">
+          <label for="mi1"></label>
+          <label for="mi2"></label>
+          <label for="mi3"></label>
+          <label for="mi4"></label>
+        </div>
+
+    </div>
 </body>
 </html>

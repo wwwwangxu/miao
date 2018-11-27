@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BOOTSTRAP-TABLE</title>
+    <style>
+
+        .input-group{
+            display: table;
+            width: 275px;
+            height: 34px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+            vertical-align: middle;
+            box-sizing: border-box;
+        }
+        .input-group > *{
+            display: table-cell;
+        }
+        input{
+            border: none;
+            width: 100%;
+            height: 34px;
+            /* line-height: 34px; 也可以*/
+            padding-left: 10px;
+        }
+        .input-group-addon{
+            width: 34px;
+            background-color: #eee;
+            font-size: 14px;
+        }
+        .input-group-addon:last-child{
+            width: 46px;
+            background-color: #eee;
+            padding-left: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="input-group">
+        <div class="input-group-addon">$</div>
+        <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+        <div class="input-group-addon">.00</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>水平垂直居中</title>
+    <style>
+      *{
+        box-sizing: border-box;
+      }
+      .parent{
+        width: 200px;
+        height: 200px;
+        border: 2px solid orange;
+        margin: 20px;
+        position: relative;
+      }
+
+      .parent div{
+        width: 100px;
+        height: 100px;
+        border: 2px solid;
+        background-color: lightgreen;
+      }
+
+      .box1{
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .center1{
+        text-align: center;
+        line-height: 196px;  
+      }
+      /* 通过'textalign: center'和'vertical-align: middle;'设置居中 */
+
+      .box2{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+      }
+      /* 通过'position: absolute;'和'margin: auto;'设置居中 */
+
+      .box3{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -50px;
+        margin-left: -50px;
+      }
+      /* 通过'position: absolute;'和负 margin 设置居中 */
+
+      .box4{
+        position: absolute;
+        top: calc(50% - 50px);
+        left: calc(50% - 50px);
+      }
+      /* 通过'position: absolute;'和方位 calc 设置居中 */
+
+      .box5{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+      /* 通过'position: absolute;'和 transform 设置居中 */
+
+      .center6{
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+      }
+      .box6{
+        display: inline-block;
+      }
+      /* 通过表格样式设置居中 */
+
+    </style>
+</head>
+<body>
+    <div class="center1 parent">
+        <div class="box1"></div>
+        </div>
+        <div class="center2 parent">
+        <div class="box2"></div>
+        </div>
+        <div class="center3 parent">
+        <div class="box3"></div>
+        </div>
+        <div class="center4 parent">
+        <div class="box4"></div>
+        </div>
+        <div class="center5 parent">
+        <div class="box5"></div>
+        </div><div class="center6 parent">
+        <div class="box6"></div>
+        </div>
+    </div>
+</body>
+</html>
