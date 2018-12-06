@@ -1,0 +1,432 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+*{
+    box-sizing: border-box;
+}
+
+
+header{
+    width: 100%;
+    height: 762px;
+    background-image: url(https://mobike.com/cn/assets/themes/moby/img/landing/hero-bg-3.jpg);
+    background-position: 57% 47%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+header div.logo{
+    color: #fff;
+    font-weight: bolder;
+    width: 170px;
+    height: 70px;
+    text-align: center;
+    position: absolute;
+    top: 20px;
+    left: calc(50% - 540px);
+}
+header div.logo .en{
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+header div.logo .zh{
+    font-size: 14px;
+    letter-spacing: 8px;
+}
+.pd-intro li{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.pd-intro{
+    color: #fff;
+    position: absolute;
+    right: calc(50% - 540px );
+    top: 30px;
+}
+
+
+
+.hidden-intro {
+    color: #fff;
+    height: 265px;
+    height: 372px;
+    display: none;
+}
+.hidden-intro li:first-child{
+    height: 82px;
+    padding-top: 21px;
+}
+.hidden-intro li:nth-child(n+2){
+    height: 57px;
+    width: 100%;
+    line-height: 57px;
+    border-top: 1px solid #c9421d;
+}
+
+.hidden-intro .menu-logo .en{
+    font-size: 22px;
+    letter-spacing: 2px;
+    font-weight: bolder;
+}
+.hidden-intro .menu-logo .zh{
+    font-size: 14px;
+    letter-spacing: 8px;
+    font-weight: bolder;
+}
+.hidden-intro label{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    z-index: 20;
+}
+.hidden-intro label::before{
+    content: '';
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    top: 20px;
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    transition: .3s;
+  }
+.hidden-intro label::after{
+content: '';
+position: absolute;
+top: 30px;
+left: 0px;
+right: 0px;
+margin: auto;
+width: 20px;
+height: 2px;
+background-color: #fff;
+transition: .3s;
+}
+.hidden-intro input:checked + label::before{
+transform: rotate(30deg);
+transform-origin: left center;
+}
+.hidden-intro input:checked + label::after{
+transform: rotate(-30deg);
+transform-origin: left center;
+}
+
+.hidden-intro input{
+    display: none;
+}
+.hidden-intro ul{
+    background-color: rgba(240,75,30,0.8);
+    padding-left: 40px;
+    width: 100%;
+    display: none;
+    position: relative;
+    z-index: 10;
+}
+.hidden-intro input:checked ~ ul{
+    display: block;
+}
+
+
+
+.slogan h1{
+    font-size: 60px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #fff;
+}
+.slogan .pd-use{
+    color: #fff;
+    font-size: 21px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 60px;
+    width: 295px;
+    height: 60px;
+    border-radius: 6px;
+    background-color: rgba(0,0,0,0.2);
+}
+.slogan{
+    position: absolute;
+    left: calc(50% - 500px);
+    top: 300px;
+}
+
+
+main{
+    width: 100%;
+    margin-top: 1px;
+    border-bottom: 1px solid #eeeeee;
+    display: flow-root;
+}
+main .brand-intro{
+    display: flow-root;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+main .brand-intro h2{
+    font-weight: normal;
+    margin-top: 35px;
+}
+.brand-intro > div{
+    width: 25%;
+    height: 260px;
+    float: left;
+}
+.mobike-culture{
+    background-image: url(https://mobike.com/cn/assets/themes/moby/img/promo-01.jpg
+    );
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-top: 1px solid #fff;
+    border-right: 2px solid #fff;
+}
+.mobike-tech{
+    background-image: url(https://mobike.com/cn/assets/themes/moby/img/promo-02.jpg
+    );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    border-top: 1px solid #fff;
+    border-right: 2px solid #fff;
+}
+.mobike-live{
+    background-image: url(https://mobike.com/cn/assets/themes/moby/img/promo-03.jpg
+    );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-top: 1px solid #fff;
+    border-right: 2px solid #fff;
+}
+.mobike-invite{
+    background-image: url(https://mobike.com/cn/assets/themes/moby/img/promo-04.jpg
+    );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    border-top: 1px solid #fff;
+}
+
+.brand-related{
+    max-width: 1080px;
+    margin: auto;
+    display: flow-root;
+    text-align: center;
+    position: relative;
+}
+.brand-related > div{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 45px 0;
+}
+.related-wx{
+    float: left;
+    margin-left: 20px;
+}
+
+.related-credit{
+    float: right;
+    margin-right: 20px;
+}
+.brand-way{
+    height: 50px;
+    display: flow-root;
+    text-align: left;
+}
+.brand-related h4{
+    font-weight: normal;
+    margin: 0;
+}
+.brand-related p{
+    color: #424542;
+    margin: 0;
+}
+.bgi{
+    height: 50px;
+    width: 50px;
+    float: left;
+    margin-right: 5px;
+}
+.bgi-wx{
+    background-image: url(https://mobike.com/cn/assets/themes/moby/img/icon-wechat.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+}
+.bgi-lishi{
+    background-image: url(https://mobike.com/cn/assets/themes/moby/img/icon-rp.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+}
+.bgi-credit{
+    background-image: url(https://mobike.com/cn/assets/themes/moby/img/icon-credit.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+}
+
+footer{
+    width: 100%;
+}
+.container{
+    max-width: 1080px;
+    margin: auto;
+    display: flow-root;
+    position: relative;
+}
+.company-info{
+    margin-left: 20px;
+}
+.foot-logo{
+    color: #ff4611;
+    letter-spacing: 2px;
+    margin: 30px 0;
+    font-size: 24px;
+}
+.foot-logo a span{
+    font-size: 28px;
+ }
+.tel .kefu, p.zh-name{
+    color: #424542;
+    margin-right: 5px;
+}
+
+.foot-intro > ul >li{
+    font-weight: bolder;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 80px;
+}
+.foot-intro > ul >li:first-child{
+    margin-left: 0;
+}
+.foot-intro > ul >li li{
+    font-weight: normal;
+    margin: 15px 0;
+    color: #424542;
+}
+.foot-intro > ul{
+   position: absolute;
+   top: 45px;
+   right: 0;
+}
+
+
+@media screen and (max-width: 1079px){
+
+    header{
+        height: 442px;
+    }
+
+    header div.logo{
+        position: absolute;
+        top: 20px;
+        left: 0px;
+    }
+    .slogan h1{
+        font-size: 40px;
+        margin-top: 0;
+        margin-bottom: 25px;
+        color: #fff;
+    }
+    .slogan .pd-use{
+        color: #fff;
+        font-size: 21px;
+        font-weight: bolder;
+        letter-spacing: 2px;
+        text-align: center;
+        line-height: 60px;
+        width: 295px;
+        height: 60px;
+        border-radius: 6px;
+        background-color: rgba(0,0,0,0.2);
+    }
+    .slogan{
+        position: absolute;
+        left: 20px;
+        top: 170px;
+    }
+    .pd-intro{
+        display: none;
+    }
+    .hidden-intro {
+        display: block;
+    }
+    .brand-intro > div{
+        width: 50%;
+    }
+    .mobike-tech{
+        border-right: none;
+    }
+
+
+
+}
+
+@media screen and (max-width: 810px){
+
+    .foot-intro > ul{
+        position: absolute;
+        top: 205px;
+        left: 20px;
+     }
+     .foot-intro > ul >li{
+        font-weight: bolder;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 5vw;
+    }
+}
+
+
+@media screen and (max-width: 630px){
+
+    .brand-intro > div{
+        width: 100%;
+    }
+    .related-credit{
+        float: left;
+        margin-left: 20px
+    }
+    .brand-related > div{
+        padding: 15px 0;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
