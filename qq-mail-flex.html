@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>qq-mail-flex</title>
+    <style>
+        html,
+        body {
+            width: 100vw;
+            height: 100%;
+        }
+
+        .container * {
+            box-shadow: -1px -1px 6px -1px;
+        }
+
+        /* 1 使用三个兄弟关系的盒子 */
+        /* .container{
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100vw;
+        align-content: flex-start;
+        }
+        header{
+        width: 100vw;
+        height: 100px;
+        background-color: #88b14b;;
+        }
+        aside{
+        background-color: #55393a;;
+        width: 25vw;
+        height: calc(100% - 100px);
+        }
+        main{
+        background-color: #fe6f61;
+        width: 75vw;
+        height: calc(100% - 100px);
+        } */
+
+
+        /* 2 使用两个flex-box */
+
+        .container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            width: 100%;
+            height: 100px;
+            background-color: #55397a;
+        }
+
+        section {
+            width: 100%;
+            background-color: pink;
+            height: calc(100% - 100px);
+            display: flex;
+            flex-direction: row;
+        }
+
+        aside {
+            width: 20%;
+            background-color: #fe6f61;
+        }
+
+        main {
+            background-color: #88b14b;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- one -->
+    <!-- <div class="container">
+        
+        <header></header>
+        <aside></aside>
+        <main></main>
+    
+    </div> -->
+
+    <!-- two -->
+    <div class="container">
+        <header></header>
+        <section>
+            <aside></aside>
+            <main></main>
+        </section>
+    </div>
+</body>
+
+</html>
