@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>bootstrap-table</title>
+    <style>
+      .table {
+        border-collapse: collapse;
+        box-sizing: border-box;
+      }
+      .table thead th:nth-child(1) {
+        width: 96px;
+      }
+      .table thead th:nth-child(2) {
+        width: 185px;
+      }
+      .table thead th:nth-child(3) {
+        width: 257px;
+      }
+      .table thead th:nth-child(4) {
+        width: 243px;
+      }
+      .table th {
+        text-align: left;
+        padding-left: 10px;
+      }
+      .table td {
+        padding-left: 10px;
+      }
+      .table tr {
+        height: 50px;
+      }
+      .table thead {
+        border-top: 1px solid #dee2e6;
+        border-bottom: 2px solid #dee2e6;
+      }
+      .table tbody tr:nth-child(2) {
+        border-top: 1px solid #dee2e6;
+        border-bottom: 1px solid #dee2e6;
+      }
+
+      /* 以上是table类 */
+
+      .table-dark {
+        background-color: #212529;
+        color: #fff;
+        position: relative;
+      }
+      .table-dark thead {
+        border-color: #32383e;
+      }
+
+      .table-dark tbody tr:nth-child(2) {
+        border-color: #32383e;
+      }
+      /* 以上是table-dark类 */
+
+      x.table-striped tbody tr:nth-child(odd) {
+        background-color: #f2f2f2;
+      }
+
+      table.table-striped.table-dark tbody tr:nth-child(odd) {
+        background-color: #2c3034;
+      }
+      /* 以上是table-striped类 */
+
+      .table-bordered th,
+      .table-bordered td {
+        border: 1px solid #dee2e6;
+      }
+
+      table.table-bordered.table-dark td,
+      table.table-bordered.table-dark th {
+        border: 1px solid #32383e;
+      }
+      /* 以上是table-bordered类 */
+
+      table.table.table-borderless tr {
+        border: none;
+      }
+      table.table.table-borderless thead {
+        border: none;
+      }
+      /* 以上是table-borderless类 */
+
+      .table-hover tbody tr:hover {
+        background-color: #ececec;
+      }
+
+      table.table-dark.table-hover tbody tr:hover {
+        background-color: #323539;
+      }
+      /* 以上是table-hover类 */
+
+      .table-sm tr {
+        height: 33px;
+        font-size: 14px;
+      }
+      /* 以上是table-sm类 */
+
+      .table-responsive {
+        overflow-x: scroll;
+        width: 500px;
+        display: block;
+      }
+      /* 以上是table-responsive类 */
+    </style>
+  </head>
+  <body>
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+          <td>cell</td>
+          <td>cell</td>
+          <td>cell</td>
+          <td>cell</td>
+          <td>cell</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+          <td>cell</td>
+          <td>cell</td>
+          <td>cell</td>
+          <td>cell</td>
+          <td>cell</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td colspan="2">Larry the Bird</td>
+          <td>@twitter</td>
+          <td>cell</td>
+          <td>cell</td>
+          <td>cell</td>
+          <td>cell</td>
+          <td>cell</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
