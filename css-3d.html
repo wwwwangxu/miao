@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS-CUTE</title>
+    <style>
+        section {
+            height: 300px;
+            position: relative;
+            xbackground-color: rgba(0, 0, 0, 0.05);
+            transform: rotatex(40deg) perspective(2000px) rotatez(20deg);
+            transform-style: preserve-3d;
+            animation: spin-cute 10s infinite linear;
+        }
+
+        @keyframes spin-cute {
+            from {
+                transform: rotatex(0deg) rotatey(0deg) rotatez(0deg);
+            }
+
+            to {
+                transform: rotatex(360deg) rotatey(360deg) rotatez(360deg);
+            }
+        }
+
+        section>div {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            box-sizing: border-box;
+            border: 1px solid;
+        }
+
+        section>div:nth-child(1) {
+            transform: translatez(-50px);
+        }
+
+        section>div:nth-child(2) {
+            transform: rotatey(90deg) translatez(50px);
+        }
+
+        section>div:nth-child(3) {
+            transform: rotatey(90deg) translatez(-50px);
+        }
+
+        section>div:nth-child(4) {
+            transform: rotatey(90deg) rotatex(90deg) translatez(50px);
+        }
+
+        section>div:nth-child(5) {
+            transform: rotatey(90deg) rotatex(90deg) translatez(-50px);
+        }
+
+        section>div:nth-child(6) {
+            transform: translatez(50px);
+        }
+
+        main {
+            height: 300px;
+            position: relative;
+            xbackground-color: rgba(0, 0, 0, 0.05);
+            transform: rotatex(20deg) perspective(2000px) rotatez(110deg);
+            transform-style: preserve-3d;
+            animation: smallcute 5s infinite linear;
+        }
+
+        @keyframes smallcute {
+            0% {
+                transform: rotatex(0deg) rotatey(0deg) rotate(0deg);
+            }
+
+            100% {
+                transform: rotatex(720deg) rotatey(720deg) rotate(720deg);
+            }
+        }
+
+        main>div {
+            width: 50px;
+            height: 50px;
+            box-sizing: border-box;
+            border: 1px solid;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+        }
+
+        main>div:nth-child(1) {
+            transform: translatez(25px);
+            background-color: #fe6f61;
+        }
+
+        main>div:nth-child(2) {
+            transform: translatez(-25px);
+            background-color: pink;
+        }
+
+        main>div:nth-child(3) {
+            transform: rotatey(90deg) translatez(25px);
+            background-color: aqua;
+        }
+
+        main>div:nth-child(4) {
+            transform: rotatey(90deg) rotatex(90deg) translatez(25px);
+            background-color: tan;
+        }
+
+        main>div:nth-child(5) {
+            transform: rotatey(90deg) rotatex(90deg) translatez(-25px);
+            background-color: violet;
+        }
+
+        main>div:nth-child(6) {
+            transform: rotatey(90deg) translatez(-25px);
+            background-color: purple;
+        }
+
+        section:hover {
+            animation-play-state: paused;
+        }
+
+        section:hover>div {}
+
+        section:hover main div:nth-child(1) {
+            transform: translatez(40px);
+        }
+
+        section:hover main div:nth-child(2) {
+            transform: translatez(-40px);
+        }
+
+        section:hover main div:nth-child(3) {
+            transform: rotatey(90deg) translatez(40px);
+        }
+
+        section:hover main div:nth-child(4) {
+            transform: rotatey(90deg) rotatex(90deg) translatez(40px);
+        }
+
+        section:hover main div:nth-child(5) {
+            transform: rotatey(90deg) rotatex(90deg) translatez(-40px);
+        }
+
+        section:hover main div:nth-child(6) {
+            transform: rotatey(90deg) translatez(-40px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <main>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </main>
+        </section>
+    </div>
+</body>
+
+</html>
