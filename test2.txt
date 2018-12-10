@@ -1,34 +1,34 @@
-��
+﻿答：
 01.
-div,h1{} ��ѡ����ѡ��body������div��h1Ԫ�أ�
-div[class] [id="abc"]{} ��ѡ����ѡ�����class��������id����ֵΪabc��divԪ�أ�
-div:hover ul li > div {} ��ѡ����ѡ����hover״̬�µ�divԪ�صĺ��ulԪ�صĺ��liԪ�ص�ֱ����Ԫ��div��
-body :active {} ��ѡ����ѡ���ڱ������״̬�µ�bodyԪ�أ�
-div:hover::after {} ��ѡ����ѡ���ڹ����ͣ״̬�µ�divԪ�ص�αԪ��after;
-::selection {} ��ѡ����ѡ�������ݴ��ڱ����ѡ�е�״̬�µ�Ԫ�أ�
-:target {} ��ѡ����ѡ����id����ֵΪ��һԪ�ص�target����ֵ��Ԫ�أ�
-input + ul + p ~ span {} ��ѡ����ѡ��inputԪ�غ������ڵ��ֵ�Ԫ��ul�Ľ��������ֵ�Ԫ��pԪ�غ�������ֵ�Ԫ��span;
+div,h1{} 该选择器选择body中所有div和h1元素；
+div[class] [id="abc"]{} 该选择器选择具有class类名，且id属性值为abc的div元素；
+div:hover ul li > div {} 该选择器选择处于hover状态下的div元素的后代ul元素的后代li元素的直接子元素div；
+body :active {} 该选择器选择处于被鼠标点击状态下的body元素；
+div:hover::after {} 该选择器选择处于光标悬停状态下的div元素的伪元素after;
+::selection {} 该选择器选择其内容处于被光标选中的状态下的元素；
+:target {} 该选择器选择其id属性值为另一元素的target属性值的元素；
+input + ul + p ~ span {} 该选择器选择input元素后面相邻的兄弟元素ul的紧跟相邻兄弟元素p元素后的所有兄弟元素span;
 
 02.
-* * * {} ���ȼ����
-div * span {} ���ȼ����ĸ�
-div[title] {} ���ȼ��ڶ���
-fieldset legend + input {} ���ȼ�������
-#some #thing .not:hover .abc:hover {} ���ȼ����
+* * * {} 优先级最低
+div * span {} 优先级第四高
+div[title] {} 优先级第二高
+fieldset legend + input {} 优先级第三高
+#some #thing .not:hover .abc:hover {} 优先级最高
 
 03
-c.css������·��Ϊ https://test.example.com/path/../the/../path/c.css
+c.css的完整路径为 https://test.example.com/path/../the/../path/c.css
 
 04
-em: ������ǰԪ�ص�font-size���ֺŵĳ��ȣ�
-px: ������ʾ���ֱ��ʵ�������ĵ�ĳ��ȣ���һ����Գ��ȣ�
-rem: ������Ԫ�ؼ�HTMLԪ�ص��ֺŵĳ��ȣ�
-vw: �ӿڵĿ��ȣ�
-vh: �ӿڵĸ߶ȣ�
+em: 代表当前元素的font-size即字号的长度；
+px: 构成显示器分辨率的最基本的点的长度，是一个相对长度；
+rem: 代表根元素即HTML元素的字号的长度；
+vw: 视口的宽度；
+vh: 视口的高度；
 
 05
-����� 2.04545��
-���ȣ� 1.263636��
+面积： 2.04545；
+长度： 1.263636；
 
 06
 h2-Brown: 200px;
@@ -39,40 +39,40 @@ span-span-lazy: 54px;
 p.sucks-sucks: 200px;
 
 07
-italic: ��ר����Ƶ�б���֣�
-oblique: �ǰ�������б��Ч����
+italic: 是专门设计的斜体字；
+oblique: 是把文字倾斜的效果。
 
 08
-�� 8���ӽ��֮�󣬵����� 5 ���ӽ��֮ǰ��li��� �� li:nth-child(n+9):nth-last-child(n+6) {};
-���������ԡ�damiao-����ͷ��Ԫ�� : [class^=damiao-]{};
-rel �������� nofollow ������ʵı�ǩ : rel[~=nofollow]{} .
+第 8个子结点之后，倒数第 5 个子结点之前的li结点 ： li:nth-child(n+9):nth-last-child(n+6) {};
+【类名】以“damiao-”开头的元素 : [class^=damiao-]{};
+rel 属性中有 nofollow 这个单词的标签 : rel[~=nofollow]{} .
 
 09
-����α��ļ���״̬����д˳��Ϊ��
+链接伪类的几种状态的书写顺序为：
 1, a:link{} .
 2, a:visited{} .
 3, a:focus{} .
 4, a:hover{} .
 5, a:active{} . 
-Ϊ�˱�����ͬ��״̬�²�ͬ��ʽ����ĳ�ͻ��
+为了避免在同种状态下不同样式规则的冲突；
 
 10
-font: bold 24px/1.2 serif;  ��ȷ
+font: bold 24px/1.2 serif;  正确
 
 11
-vertical-align: middle; Ԫ������ĸ "x"���е���롣
+vertical-align: middle; 元素与字母 "x"的中点对齐。
 
 12
-baseline: ����������ʱ�����յĻ�׼�ߣ�Ӣ����ĸ"x"�ĵײ���
+baseline: 文字所绘制时所参照的基准线，英文字母"x"的底部；
 
 13
-�Ժ�ģ�͵����⣺ 
-��ģ����Ԫ�ص�������(content)���ڱ߾�(padding)���߿�(border)����߾�(margin)���ɵ��п��ߵĺ��ӣ�
-��׼W3C��ģ�ͣ� ���ӵĿ���Ĭ��Ϊcontent-box;
-IE��ģ�ͣ� ���ӵĿ���Ĭ��Ϊborder-box; 
+对盒模型的理解： 
+盒模型由元素的内容区(content)、内边距(padding)、边框(border)、外边距(margin)构成的有宽高的盒子；
+标准W3C盒模型： 盒子的宽高默认为content-box;
+IE盒模型： 盒子的宽高默认为border-box; 
 
 14
-ΪԪ������ `tabindex`���ԣ�
+为元素添加 `tabindex`属性；
 outline: 0;
 outline: none;
 
@@ -87,23 +87,23 @@ p,h1,{
     colr: #ff048;
     font: "serif" 25px;
 }
-Ӧ��Ϊ
+应改为
 p,h1{
-    background-color: rgba(��ɫֵ����ɫֵ����ɫֵ��͸����)/����ֱ��д��ɫ����
+    background-color: rgba(颜色值，颜色值，颜色值，透明度)/或者直接写颜色名；
     font-variant: normal/small-caps/inherit;
-    color: #xxxxxx ��/*ʮ��������ӦΪ3λ��6λ*/
-    font: 25px serif; /*font-fimaly��ֵӦд�����*/
+    color: #xxxxxx ；/*十六进制数应为3位或6位*/
+    font: 25px serif; /*font-fimaly的值应写在最后*/
 }
 
 17
-��Ч����Ԫ�ؼ�����Ԫ�ض�δ�����ø߶�ʱ����Ч����Ϊû�пɼ̳еĶ���
-��Ч�� ��Ԫ����������Ч�߶ȣ��Ը�Ԫ�صĸ߶�Ϊ��׼ֵ��
+无效：父元素及祖先元素都未曾设置高度时，无效；因为没有可继承的对象；
+有效： 父元素设置了有效高度；以父元素的高度为基准值。
 
 18
 box-sizing:
-content-box; Ϊ��ģ�����õĿ���Ϊ�������Ŀ��ߣ�
-padding-box; Ϊ��ģ�����õĿ���Ϊ�����������ڱ߾�Ŀ��ߣ�
-border-box; Ϊ��ģ�����õĿ��ߴӱ߿�ʼ����
+content-box; 为盒模型设置的宽高为内容区的宽高；
+padding-box; 为盒模型设置的宽高为内容区加上内边距的宽高；
+border-box; 为盒模型设置的宽高从边框开始算起。
 
 19
 <div>
@@ -120,31 +120,31 @@ div::before{
 }
 
 21
- ie7 �г��ݶ�� ie6 �͵�ԭ��:
-ie6��7ֻ�ܰ�װ��winxp���棬winxp�Դ�ie6�����ܶ�ʹ��winxp���û�����ѡ�����������
-������������Ҳ���п���ֱ��������ie8+��
+ ie7 市场份额比 ie6 低的原因:
+ie6、7只能安装在winxp上面，winxp自带ie6，而很多使用winxp的用户不会选择升级浏览器
+，就算升级，也极有可能直接升级到ie8+。
 
-Ŀǰ������������й���ȫ����г��ݶ
-ȫ���г�����
-��1����Google��Chrome: 69.64%��
-��2����Mozilla Firefox: 10.14%��
-��3����΢����IE: 6.01%��
-��4����ƻ����Safari: 5.61%��
-��5����΢����Edge: 4.21%��
-��6����Opera: 2.29%��
-�й��г�����
+目前各大浏览器在中国和全球的市场份额：
+全球市场——
+第1名：Google的Chrome: 69.64%；
+第2名：Mozilla Firefox: 10.14%；
+第3名：微软的IE: 6.01%；
+第4名：苹果的Safari: 5.61%；
+第5名：微软的Edge: 4.21%；
+第6名：Opera: 2.29%；
+中国市场——
 chrome: 46.12%;
 ie: 19.95%;
 safari: 2.58%;
 firefox: 2.54%;
 
 22
-û��doctype�ᴥ������ģʽ��
-����ģʽ��IE6/IE7�º�ģ��Ϊborder-box;
+没有doctype会触发怪异模式；
+怪异模式在IE6/IE7下盒模型为border-box;
 
 23
-background-size: contain; Բ��ֱ��Ϊ80��
-background-size: cover; Բ��ֱ��Ϊ160��
+background-size: contain; 圆的直径为80；
+background-size: cover; 圆的直径为160；
 
 24
 div.logo{
@@ -160,131 +160,131 @@ div.logo:hover{
 }
 
 25
-����ˮƽ��ֱ���з�����
-1��ʹ��text-align: center; �� line-height ��
-2��ʹ�� position��absolute; top/right/bottom/left ������Ϊ0��������margi: auto;
-3,  ��Ԫ�� display: table-cell; text-align: center; vertical-align: middle;
-4,  ʹ�� position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
-5,  �Ը�Ԫ������ display: flex; justify-content: center; align-items: center;
+五种水平垂直居中方案：
+1，使用text-align: center; 和 line-height ；
+2，使用 position：absolute; top/right/bottom/left 均设置为0，在设置margi: auto;
+3,  父元素 display: table-cell; text-align: center; vertical-align: middle;
+4,  使用 position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+5,  对父元素设置 display: flex; justify-content: center; align-items: center;
 
 26
-����Ԫ��
-    em�򣬸߶�Ϊfont-size��
-    em���������γ���������
-    ���ڿ�Ϊ�������������µİ��м�ࣻ
-    ���߼��ı��Ļ��ߣ�
-�����滻Ԫ��
-    margin-box��Ϊ�����ڿ�
-    ���ߣ���margin-box ���±�ԵΪ׼
-���ڿ�״Ԫ��
-    margin-box��Ϊ�����ڿ�
-    ���ߣ�
-        ������  ��margin-box���±�ԵΪ׼
-        ������  �����һ�����ݵĻ���Ϊ׼
+行内元素
+    em框，高度为font-size；
+    em框串起来即形成内容区；
+    行内框即为内容区加上上下的半行间距；
+    基线即文本的基线；
+行内替换元素
+    margin-box即为其行内框
+    基线：以margin-box 的下边缘为准
+行内块状元素
+    margin-box即为其行内框
+    基线：
+        无内容  以margin-box的下边缘为准
+        有内容  以最后一行内容的基线为准
 
-�п�
-    ���Ȱ��������ڿ�Ļ��߶���
-    ���ݸ�Ԫ�ص�vertical-align���µ�����Ԫ�ص����ڿ�
-    ��һ����С�Ŀ��ס�������е����ڿ򣬴���С��Ϊ�п�
+行框
+    首先把所有行内框的基线对齐
+    根据各元素的vertical-align上下调整各元素的行内框
+    用一个最小的框框住该行所有的行内框，此最小框即为行框
 
 27
-ͬ��
+同上
 
 28
-headers ���Խ���Ԫ������������ͷ�������������ӿɷ����ԣ�
-��������Ļ�Ķ�����
+headers 属性将单元格与其所属表头关联起来；增加可访问性；
+可用于屏幕阅读器。
 
 29
-color���Զ������Ԫ�ص�ǰ��ɫ��ʽ��������ΪԪ���е��ı�����ɫ��ʽ��
-Ĭ�Ͽɼ̳У�
-border/shadow/outline ��Ĭ��ȡcolor��ֵ
+color属性定义的是元素的前景色样式，即表现为元素中的文本的颜色样式；
+默认可继承；
+border/shadow/outline 都默认取color的值
 
 30
-inline-blockԪ�ض����ڱ���Ϊ��״Ԫ�أ��������Ϊ����Ԫ�أ�
-inline-blockԪ�صĻ�����������ʱ�������һ�����ݵĻ���Ϊ׼����
-������ʱ����margin-box���±�ԵΪ׼��
-display: inline-block; �ɴ���BFC��
+inline-block元素对其内表现为块状元素，对外表现为行内元素；
+inline-block元素的基线在有内容时，以最后一行内容的基线为准，在
+无内容时，以margin-box的下边缘为准；
+display: inline-block; 可触发BFC。
 
 31
-CSS Sprites ��һ����ҳͼƬӦ�ô�����ʽ��������ҳ��һЩ����ͼƬ���ϵ�һ��ͼƬ�ļ��У�
-������CSS�� `background-image`, `background-repeat`, `background-position`����Ͻ��б�����λ��
-���ŵ����ڣ� 
-       �ɼ�����ҳ��http����������ܣ�
-       �ɼ���ͼƬ���ֽڣ�����ͼƬ�ϲ���1��ͼƬ���ֽ�С�ڶ���ͼƬ���ֽ��ܺͣ�
-       �ɼ����������ţ�
-       ������񷽱㣻
-��ȱ�����ڣ�
-       ͼƬ�ϳɱȽ��鷳��
-       ��������ʱ����Ҫ�õ�ÿһ��������Ԫ�ľ�ȷλ�ã�
-       ά���ϳ�ͼƬʱ�����֪ʶ���¼�ͼƬ������Ҫ��������ͼƬ��
+CSS Sprites 是一种网页图片应用处理方式，即把网页中一些背景图片整合到一张图片文件中，
+再利用CSS的 `background-image`, `background-repeat`, `background-position`的组合进行背景定位。
+其优点在于： 
+       可减少网页的http请求，提高性能；
+       可减少图片的字节：多张图片合并成1张图片的字节小于多张图片的字节总和；
+       可减少命名困扰；
+       更换风格方便；
+其缺点在于：
+       图片合成比较麻烦；
+       背景设置时，需要得到每一个背景单元的精确位置；
+       维护合成图片时，最好知识往下加图片，而不要更改已有图片。
 
 32
-αԪ����ѡ������ֻ�ܴ���ĩβλ�ã�
-opacity���Ե�ȡֵΪ0��1������д�ɰٷ���;
-steps(number, position);  ����steps(5, end); steps(7, start);
+伪元素在选择器中只能处于末尾位置；
+opacity属性的取值为0到1，不能写成百分数;
+steps(number, position);  比如steps(5, end); steps(7, start);
 
 33
 95px;
 
 34
-����Ԫ�أ����ı���baseline���룻
-�����滻Ԫ�أ� Ԫ�ص�margin-box���±�Ե��baseline���룻
-���ڿ�״Ԫ�أ�������ʱ�����һ���ı���baseline���룻������ʱ��Ԫ�ص�margin-box���±�Ե��baseline���룻
+行内元素：沿文本的baseline对齐；
+行内替换元素： 元素的margin-box的下边缘与baseline对齐；
+行内块状元素：有内容时，最后一行文本的baseline对齐；无内容时，元素的margin-box的下边缘与baseline对齐；
 
 35
-�����������һ��Ԫ��û�ж�λ��û�и���������flexԪ�أ����Ԫ�ش��ڳ������У�
-�����飺 
+常规流：如果一个元素没有定位，没有浮动，不是flex元素，则该元素处于常规流中；
+包含块： 
 
 36
-������/����Ԫ�أ�����Ŀ鼶Ԫ�أ�
-��λԪ�أ� 
-fixed��λ�� bodyԪ�أ�
-relative��λ������Ŀ鼶Ԫ�أ�
-absolute��λ�� ����ο���λ��Ԫ�أ�
+常规流/浮动元素：最近的块级元素；
+定位元素： 
+fixed定位： body元素；
+relative定位：最近的块级元素；
+absolute定位： 被其参考定位的元素；
 
 37
-background-color: ����ɫ��
-background-image: ����ͼ��
-background-repeat: ���屳��ͼ�Ƿ��ظ���
-background-size: ���屳��ͼ�ĳߴ磻
-background-position: ���屳��ͼ��λ�ã�
-background-origin: ���屳��ͼ�Ӻδ���ʼ��Ⱦ��
-background-clip: ���屳��ͼ�Ĳü�Ч����
+background-color: 背景色；
+background-image: 背景图；
+background-repeat: 定义背景图是否重复；
+background-size: 定义背景图的尺寸；
+background-position: 定义背景图的位置；
+background-origin: 定义背景图从何处开始渲染；
+background-clip: 定义背景图的裁剪效果；
 background-attachment: scroll/fixed/local
 
 38
 box-shadow: 0 1px 6px -6px #fe6f61;
-����ֻ��ˮƽ�����ֱ��������ƫ�������ٰ�ģ���뾶��ֵ����չ�뾶��ֵ����Ϊ�෴��
+即，只在水平方向或垂直方向设置偏移量，再把模糊半径的值与扩展半径的值设置为相反。
 
 39
-border-spacing: �������Ԫ��ļ�϶��
-border-collapse: collapse; ȡ����Ԫ��ļ�϶��Ĭ��ֵΪ separate ;
+border-spacing: 定义表格单元格的间隙；
+border-collapse: collapse; 取消单元格的间隙；默认值为 separate ;
 display: table/table-row/table-cell;
-caption-side: ����������λ�ڱ����Ϸ������·���
-table-layout: auto�� �п����ɵ�Ԫ�������趨/fixed ���п��ɱ�����Ⱥ��п����趨;
-empty-cells: hide; ���ر��пյ�Ԫ��ı߿�ͱ�����Ĭ��ֵΪ show ;
+caption-side: 定义表格标题位于表格上方还是下方；
+table-layout: auto； 列宽度由单元格内容设定/fixed ；列宽由表格宽度和列宽度设定;
+empty-cells: hide; 隐藏表中空单元格的边框和背景；默认值为 show ;
 
 40
-visibility: hidden; Ԫ�ؼ���״̬�����أ�����ռλ�ñ�����
-display: none;  Ԫ�ر�ȡ�����൱�ڴ�ҳ����ʧ��
-opacity��0��Ԫ�ص�λ�ü�״̬����������ֻ�ǲ��ɼ���
+visibility: hidden; 元素及其状态被隐藏，但所占位置保留；
+display: none;  元素被取消，相当于从页面消失；
+opacity：0；元素的位置及状态都被保留，只是不可见。
 
 41
-����`time`���ԣ�����<time date-time=2018-12-8>����</time>
+添加`time`属性，比如<time date-time=2018-12-8>今天</time>
 
 42
-��Ϊ��ʾ���ķֱ��ʲ�����cm/mm����ģ�
-��ӡ������cm/mm�Ⱦ��Ե�λ��
+因为显示器的分辨率不是由cm/mm定义的；
+打印机可用cm/mm等绝对单位；
 
 43
-��
-���飨���棩
-�У��У�
-��Ԫ��
+表
+行组（列祖）
+行（列）
+单元格
 
 44
-��ƴ���ļ�ʱ�����ļ����ݵ�����
-�������һ����������ʱ������
+在拼接文件时不损坏文件内容的语义
+在往最后一行增加内容时更方便
 
 45.
 .semicircle1{
@@ -296,30 +296,30 @@ opacity��0��Ԫ�ص�λ�ü�״̬����������ֻ�ǲ��ɼ���
 }
 
 46.
-E:checked ѡ������ѡ�еı���Ԫ��
-E:disabled ѡ�����н��õı���Ԫ��
-E:enabled ѡ���������õı���Ԫ��
-E:in-range ѡ��Ԫ��ָ����Χ�ڵ�ֵ
-E:invalid ѡ��������Ч��Ԫ��
-E:required ѡ����`required`���Ե�Ԫ��
-E:optional ѡ����п�ѡ���ʵ�Ԫ��
+E:checked 选择所有选中的表单元素
+E:disabled 选择所有禁用的表单元素
+E:enabled 选择所有启用的表单元素
+E:in-range 选择元素指定范围内的值
+E:invalid 选择所有无效的元素
+E:required 选择有`required`属性的元素
+E:optional 选择具有可选性质的元素
 E:focus
 
 47.
-���� textarea{resize: none;} ����
+添加 textarea{resize: none;} 属性
 
 48.
-reset: ������Ԫ�ص�Ĭ����ʽȫ��ȥ����
-normalize: ���������������Ĭ����ʽ��ֻ����������Ⱦ��������������ʽ��
-���߶���Ϊ��ʹҳ���ڲ�ͬ���������ʾЧ����ͬ��
+reset: 把所有元素的默认样式全部去掉；
+normalize: 尽量保留浏览器的默认样式，只调整存在渲染差异的浏览器的样式。
+两者都是为了使页面在不同浏览器的显示效果相同。
 
 49.
-border-style: hidden; ���ȼ����
-����ϸ
-����ʽ double solid dashed dotted...
-����Դ
-ȡ�󷽻��Ϸ���Դ�ı߿�
-border-style: none; ���ȼ����
+border-style: hidden; 优先级最高
+看粗细
+看样式 double solid dashed dotted...
+看来源
+取左方或上方来源的边框
+border-style: none; 优先级最低
 
 50.
 background-position: calc(100% - 3px) calc(100% - 5px);
@@ -327,11 +327,11 @@ background-position: calc(100% - 3px) calc(100% - 5px);
 51.
 
 52.
-omitʡ�ԣ�multiple������շ�ʽhump���л���ʽline-through��
-layout���֣�typo�������code review�����飬�뾶radius��config���ã�
-����set������rectangle��binary�����ƣ�decimalʮ���ƣ�ʮ������hexadecimal��
-�˽���octal��SEO���������Ż���HTMLʵ�� HTML entity��
-���廯 semantic��������compatibility��quirk���죬reference���ã���Сд����case-senstive������alias
+omit省略，multiple多个，驼峰式hump，中划线式line-through，
+layout布局，typo输入错误，code review代码检查，半径radius，config配置，
+集合set，矩形rectangle，binary二进制，decimal十进制，十六进制hexadecimal，
+八进制octal，SEO搜索引擎优化，HTML实体 HTML entity，
+语义化 semantic，兼容性compatibility，quirk怪异，reference引用，大小写敏感case-senstive，别名alias
 
 
 
