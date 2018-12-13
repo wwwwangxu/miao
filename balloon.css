@@ -132,7 +132,7 @@ span.features{
 }
 .syntax{
     box-sizing: border-box;
-    width: 55%;
+    width: 63%;
     padding: 2.2em .8em;
     background-color: #fff;
     font-size: 14px;
@@ -168,7 +168,7 @@ div.demo > div {
 }
 div.demo .awesome-result{
     flex-grow: 1;
-    margin-right: 4em;
+    margin-right: 2em;
     text-align: center;
 }
 
