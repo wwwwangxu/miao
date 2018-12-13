@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            xbackground-color: rgba(0, 0, 0, 0.4);
+            animation: spin 5s infinite linear;
+            margin: 200px;
+            position: relative;
+            transform-origin: top left;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotatez(0deg);
+            }
+
+            to {
+                transform: rotatez(360deg);
+            }
+        }
+
+        section {
+            width: 50px;
+            height: 50px;
+            background-color: #fe6f61;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            border-top: 2px black solid;
+            border-left: 2px black solid;
+            animation: spin-small 5s infinite linear
+        }
+
+        @keyframes spin-small {
+            from {
+                transform: rotatez(0deg);
+            }
+
+            to {
+                transform: rotatez(-360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <section></section>
+    </div>
+</body>
+
+</html>
