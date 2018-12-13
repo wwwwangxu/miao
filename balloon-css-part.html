@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Balloon-CSS</title>
+    <link rel="stylesheet" href="balloon.css">
+    <style>
+        .balloon {
+            margin-top: 100px;
+            margin-left: 200px;
+        }
+
+        .balloon>button {
+            width: 160px;
+            height: 47px;
+            border: none;
+            background-color: #ff3d2e;
+            color: #fff;
+            border-radius: 4px;
+            font-size: 18px;
+            position: relative;
+            outline: none;
+        }
+
+        button[data-balloon]::before {
+            content: attr(data-balloon);
+            background-color: #282426;
+            font-size: 14px;
+            padding: 0.5em 1.2em;
+            border-radius: 4px;
+            position: absolute;
+            transition: .2s;
+            white-space: nowrap;
+            opacity: 0;
+        }
+
+        button[data-balloon]::after {
+            content: '';
+            display: block;
+            width: 18px;
+            height: 8px;
+            box-sizing: border-box;
+            border-top: 8px solid #282426;
+            border-right: 9px solid transparent;
+            border-bottom: none;
+            border-left: 9px solid transparent;
+            position: absolute;
+            transition: .2s;
+            opacity: 0;
+        }
+
+        [data-balloon]:hover::before,
+        [data-balloon]:hover::after {
+            opacity: 1;
+        }
+        button:hover{
+            background-color: #e01909;
+        }
+
+        /* data-balloon-pos="up" */
+        [data-balloon][data-balloon-pos="up"]::before {
+            left: 50%;
+            bottom: 100%;
+            margin-bottom: 12px;
+            transform: translate(-50%, 10px);
+        }
+
+        [data-balloon][data-balloon-pos="up"]::after {
+            left: 50%;
+            bottom: 100%;
+            margin-bottom: 5px;
+            transform: translate(-50%, 10px);
+        }
+
+        [data-balloon][data-balloon-pos="up"]:hover::before {
+            transform: translate(-50%, 0);
+        }
+
+        [data-balloon][data-balloon-pos="up"]:hover::after {
+            transform: translate(-50%, 0);
+        }
+
+        /* data-balloon-pos="right" */
+        [data-balloon][data-balloon-pos="right"]::after {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 18px;
+            border-top: 9px solid transparent;
+            border-right: 8px solid #282426;
+            border-bottom: 9px solid transparent;
+            border-left: none;
+        }
+
+        [data-balloon][data-balloon-pos="right"]::before {
+            left: 100%;
+            bottom: 50%;
+            margin-left: 12px;
+            transform: translate(-10px, 50%);
+        }
+
+        [data-balloon][data-balloon-pos="right"]::after {
+            left: 100%;
+            bottom: 50%;
+            margin-left: 5px;
+            transform: translate(-10px, 50%);
+        }
+
+        [data-balloon][data-balloon-pos="right"]:hover::before {
+            transform: translate(0px, 50%);
+        }
+
+        [data-balloon][data-balloon-pos="right"]:hover::after {
+            transform: translate(0px, 50%);
+        }
+
+
+        /* data-balloon-pos="bottom" */
+
+        [data-balloon][data-balloon-pos="bottom"]::after {
+            content: '';
+            display: block;
+            width: 18px;
+            height: 8px;
+            border-top: none;
+            border-right: 9px solid transparent;
+            border-bottom: 8px solid #282426;
+            border-left: 9px solid transparent;
+        }
+
+        [data-balloon][data-balloon-pos="bottom"]::before {
+            top: 100%;
+            left: 50%;
+            margin-top: 12px;
+            transform: translate(-50%, -10px);
+        }
+
+        [data-balloon][data-balloon-pos="bottom"]::after {
+            top: 100%;
+            left: 50%;
+            margin-top: 5px;
+            transform: translate(-50%, -10px);
+        }
+
+        [data-balloon][data-balloon-pos="bottom"]:hover::before {
+            transform: translate(-50%, 0px);
+        }
+
+        [data-balloon][data-balloon-pos="bottom"]:hover::after {
+            transform: translate(-50%, 0px);
+        }
+
+
+        /* data-balloon-pos="left" */
+
+        [data-balloon][data-balloon-pos="left"]::after {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 18px;
+            border-top: 9px solid transparent;
+            border-right: none;
+            border-bottom: 9px solid transparent;
+            border-left: 8px solid #282426;
+        }
+
+        [data-balloon][data-balloon-pos="left"]::before {
+            right: 100%;
+            bottom: 50%;
+            margin-right: 12px;
+            transform: translate(10px, 50%);
+        }
+
+        [data-balloon][data-balloon-pos="left"]::after {
+            right: 100%;
+            bottom: 50%;
+            margin-right: 5px;
+            transform: translate(10px, 50%);
+        }
+
+        [data-balloon][data-balloon-pos="left"]:hover::before {
+            transform: translate(0px, 50%);
+        }
+
+        [data-balloon][data-balloon-pos="left"]:hover::after {
+            transform: translate(0px, 50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="balloon balloon1">
+        <button data-balloon="What's up!" data-balloon-pos="up">Hover me!</button>
+    </div>
+    <div class="balloon balloon2">
+        <button data-balloon="What's up!" data-balloon-pos="right">Hover me!</button>
+    </div>
+    <div class="balloon balloon3">
+        <button data-balloon="What's up!" data-balloon-pos="bottom">Hover me!</button>
+    </div>
+    <div class="balloon balloon4">
+        <button data-balloon="What's up!" data-balloon-pos="left">Hover me!</button>
+    </div>
+</body>
+
+</html>

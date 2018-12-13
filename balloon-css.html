@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Balloon.css</title>
+    <link rel="icon" href="https://kazzkiq.github.io/balloon.css/favicon.ico">
+    <link rel="stylesheet" href="balloon.css">
+</head>
+
+<body>
+    <header>
+
+        <div class="container">
+            <div class="logo">
+                <img src="https://kazzkiq.github.io/balloon.css/assets/img/logo.svg" alt="Balloon.css">
+            </div>
+            <div class="star">
+                <button >
+                    <i class="iconfont fa-star"></i><span>Star</span>
+                </button>
+            </div>  
+            <div class="ad">
+                    <div class="ad-logo">
+                        <img src="https://cdn4.buysellads.net/uu/1/3386/1525189887-61450.png" alt="ad-St">
+                    </div>
+                    <p><a href="#">Students and Teachers, save up to 60% on Adobe Creative Cloud.</a></p>
+                    <div class="ad-foot">adds via Carbon</div>
+            </div>
+            <div class="profile">
+                    <h2>Simple tooltips made of pure CSS</h2>
+                    <p>Balloon.css lets you add tooltips to elements <Strong>without JavaScript</Strong> and in just a few lines of CSS.</p>
+                <div class="links">
+                    <a href="#"><button data-balloon="https://github.com/kazzkip/balloon.css" data-balloon-pos="up">Github Project</button></a>
+                    <a href="#"><button data-balloon="For minified version, visit Github" data-balloon-pos="up">Download CSS</button></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="container">
+
+            <!-- positioning -->
+            <div class="content positioning">
+                <h2>Positioning</h2>
+                <p class="features-intro">
+                    For positioning, use <span class='features'>data-balloon-pos</span> attribute with one of the values: <span class="features">up</span>, <span class="features">down</span>, <span class="features">left</span> or <span class="features">right</span>
+                </p>
+                <div class="demo positioning-demo">
+                    
+                    <div class="direction direction-up">
+                        <div class="syntax syntax-up">
+                            <code>
+                                &lt;button data-balloon="<span class="attr-value">Whats up!</span>" data-balloon-pos="<span class="attr-value">up</span>"&gt;<span class="attr-content">Hover me!</span>&lt;/button&gt;
+                            </code>
+                        </div>
+                        <div class="awesome-result">
+                            <button data-balloon="Whats up!" data-balloon-pos="up">Hover me!</button>
+                        </div>
+                    </div>
+
+                    <div class="direction direction-left">
+                        <div class="syntax syntax-left">
+                            <code>
+                                &lt;button data-balloon="<span class="attr-value">Whats up!</span>" data-balloon-pos="<span class="attr-value">left</span>"&gt;<span class="attr-content">Hover me!</span>&lt;/button&gt;
+                            </code>
+                        </div>
+                        <div class="awesome-result">
+                            <button data-balloon="Whats up!" data-balloon-pos="left">Hover me!</button>
+                        </div>
+                    </div>
+
+                    <div class="direction direction-right">
+                        <div class="syntax syntax-right">
+                            <code>
+                                &lt;button data-balloon="<span class="attr-value">Whats up!</span>" data-balloon-pos="<span class="attr-value">right</span>"&gt;<span class="attr-content">Hover me!</span>&lt;/button&gt;
+                            </code>
+                        </div>
+                        <div class="awesome-result">
+                            <button data-balloon="Whats up!" data-balloon-pos="right">Hover me!</button>
+                        </div>
+                    </div>
+
+                    <div class="direction direction-down">
+                        <div class="syntax syntax-down">
+                            <code>
+                                &lt;button data-balloon="<span class="attr-value">Whats up!</span>" data-balloon-pos="<span class="attr-value">down</span>"&gt;<span class="attr-content">Hover me!</span>&lt;/button&gt;
+                            </code>
+                        </div>
+                        <div class="awesome-result">
+                            <button data-balloon="Whats up!" data-balloon-pos="down">Hover me!</button>
+                        </div>
+                    </div>
+                        
+                </div>
+            </div>
+
+            <!-- Length -->
+            <div class="content length">
+                <h2>Length</h2>
+                <p class="features-intro">
+                    By default, tooltips will always remain single-line no matter their length. You can change this behavior by using the attribute <span class='features'>data-balloon-length</span> with one of the values: <span class="features">small</span>, <span class="features">medium</span>, <span class="features">large</span> or <span class="features">fit</span>
+                </p>
+                <div class="demo length-demo">
+                    
+                    <div class="size size-small">
+                        <div class="syntax syntax-small">
+                            <code>
+                                &lt;button data-balloon-length="<span class="attr-value">small</span>" data-balloon="<span class="attr-value">Hi.</span>" data-balloon-pos="<span class="attr-value">up</span>"&gt;<span class="attr-content">I'm a small tooltip</span>&lt;/button&gt;
+                            </code>
+                        </div>
+                        <div class="awesome-result">
+                            <button data-balloon-length="small" data-balloon="Hi." data-balloon-pos="up">I'm a small tooltip</button>
+                        </div>
+                    </div>
+
+                    <div class="size size-medium">
+                        <div class="syntax syntax-medium">
+                            <code>
+                                &lt;button data-balloon-length="<span class="attr-value">medium</span>" data-balloon="<span class="attr-value">Now that's a super big text we have over here right? Lorem ipsum dolor sit I'm done.</span>" data-balloon-pos="<span class="attr-value">up</span>"&gt;<span class="attr-content">I'm a medium tooltip</span>&lt;/button&gt;
+                            </code>
+                        </div>
+                        <div class="awesome-result">
+                            <button data-balloon-length="medium" data-balloon="Now that's a super big text we have over here right? Lorem ipsum dolor sit I'm done." data-balloon-pos="up">I'm a medium tooltip</button>
+                        </div>
+                    </div>
+
+                    <div class="size size-large">
+                        <div class="syntax syntax-large">
+                            <code>
+                                &lt;button data-balloon-length="<span class="attr-value">large</span>" data-balloon="<span class="attr-value">What about something really big? This may surpass your window dimensions. Imagine you're on that boring class with that boring teacher and you didn't slept so well last night. Suddenly you're sleeping in class. Can you believe it?!</span>" data-balloon-pos="<span class="attr-value">up</span>"&gt;<span class="attr-content">I'm a large tooltip</span>&lt;/button&gt;
+                            </code>
+                        </div>
+                        <div class="awesome-result">
+                            <button data-balloon-length="large" data-balloon="What about something really big? This may surpass your window dimensions. Imagine you're on that boring class with that boring teacher and you didn't slept so well last night. Suddenly you're sleeping in class. Can you believe it?!" data-balloon-pos="up">I'm a large tooltip</button>
+                        </div>
+                    </div>
+
+                    <div class="size size-Xlarge">
+                        <div class="syntax syntax-Xlarge">
+                            <code>
+                                &lt;button data-balloon-length="<span class="attr-value">Xlarge</span>" data-balloon="<span class="attr-value">What about something really big? This may surpass your window dimensions. Imagine you're on that boring class with that boring teacher and you didn't slept so well last night. Suddenly you're sleeping in class. Can you believe it?!</span>" data-balloon-pos="<span class="attr-value">up</span>"&gt;<span class="attr-content">I'm a Xlarge tooltip</span>&lt;/button&gt;
+                            </code>
+                        </div>
+                        <div class="awesome-result">
+                            <button data-balloon-length="Xlarge" data-balloon="What about something really big? This may surpass your window dimensions. Imagine you're on that boring class with that boring teacher and you didn't slept so well last night. Suddenly you're sleeping in class. Can you believe it?!" data-balloon-pos="up">I'm a Xlarge tooltip</button>
+                        </div>
+                    </div>
+
+                    <div class="size size-fit">
+                        <div class="syntax syntax-fit">
+                            <code>
+                                &lt;button data-balloon-length="<span class="attr-value">fit</span>" data-balloon="<span class="attr-value">What about something really big? This may surpass your window dimensions. Imagine you're on that boring class with that boring teacher and you didn't slept so well last night. Suddenly you're sleeping in class. Can you believe it?!</span>" data-balloon-pos="<span class="attr-value">up</span>"&gt;<span class="attr-content">My width will fit to element</span>&lt;/button&gt;
+                            </code>
+                        </div>
+                        <div class="awesome-result">
+                            <button data-balloon-length="fit" data-balloon="What about something really big? This may surpass your window dimensions. Imagine you're on that boring class with that boring teacher and you didn't slept so well last night. Suddenly you're sleeping in class. Can you believe it?!" data-balloon-pos="up">My width will fit to element</button>
+                        </div>
+                    </div>
+                        
+                </div>
+            </div>
+
+            <!-- visible -->
+            <div class="content visible">
+                <h2>Showing tooltips programatically</h2>
+                <p class="features-intro">
+                    If you want to show tooltips even when user interaction isn't happening, you can simply use the <span class='features'>data-balloon-visible</span> attribute:
+                </p>
+                <div class="demo visible-demo">
+                    
+                    <div class="visible">
+                        <div class="syntax syntax-visible">
+                            <code>
+                                &lt;button data-balloon-visible data-balloon="<span class="attr-value">I am always visible!</span>" data-balloon-pos="<span class="attr-value">up</span>"&gt;<span class="attr-content">Always visible!</span>&lt;/button&gt;
+                            </code>
+                        </div>
+                        <div class="awesome-result">
+                            <button data-balloon-visible data-balloon="I am always visible!" data-balloon-pos="up">Always visible!</button>
+                        </div>
+                    </div>
+
+                </div>
+                <p class="features-intro">
+                    The attribute <span class='features'>data-balloon-visible</span> can be easily added via JavaScript (e.g. <span class='features'>.setAttribute()</span>), enabling you to show tooltips whenever needed.
+                </p>
+            </div>
+
+            <!-- Glyphs and Icon Fonts -->
+            <div class="content icon-fonts">
+                <h2>Glyphs and Icon Fonts</h2>
+                <p class="features-intro">
+                    You can also add any HTML special character to your tooltips, or even use third-party Icon fonts:
+                </p>
+                <div class="demo icon-fonts-demo">
+                    
+                    <div class="spe-cha">
+                        <div class="syntax syntax-cha">
+                            <code>
+                                &lt;button data-balloon="<span class="attr-value">HTML special characters: &#9787; &#9986; &#9820;</span>" data-balloon-pos="<span class="attr-value">up</span>"&gt;<span class="attr-content">Hover me!</span>&lt;/button&gt;
+                            </code>
+                        </div>
+                        <div class="awesome-result">
+                            <button data-balloon="HTML special characters: &#9787; &#9986; &#9820;" data-balloon-pos="up">Hover me!</button>
+                        </div>
+                    </div>
+
+                    <div class="emojis">
+                        <div class="syntax syntax-emojis">
+                            <code>
+                                &lt;button data-balloon="<span class="attr-value">Emojis: 😀 😬 😁 😂 😃 😄 😅 😆</span>" data-balloon-pos="<span class="attr-value">up</span>"&gt;<span class="attr-content">Hover me!</span>&lt;/button&gt;
+                            </code>
+                        </div>
+                        <div class="awesome-result">
+                            <button data-balloon="Emojis: 😀 😬 😁 😂 😃 😄 😅 😆" data-balloon-pos="up">Hover me!</button>
+                        </div>
+                    </div>
+
+                    <div class="icon-fonts-awesome">
+                        <div class="syntax syntax-awesome">
+                            <code>
+                                &lt;button data-balloon="<span class="attr-value">Font Awesome: &amp;#xf030; &amp;#xf133; &amp;#xf1fc; &amp;#xf03e; &amp;#xf1f8;</span>" data-balloon-pos="<span class="attr-value">up</span>"&gt;<span class="attr-content">Hover me!</span>&lt;/button&gt;
+                            </code>
+                        </div>
+                        <div class="awesome-result">
+                            <button class="font-awesome" data-balloon="Font Awesome: &#xf030; &#xf133; &#xf1fc; &#xf03e; &#xf1f8;" data-balloon-pos="up">Hover me!</button>
+                        </div>
+                    </div>
+                        
+                </div>
+            </div>
+
+            <div class="content gap"></div>
+
+            <!-- How to use -->
+            <div class="content use-intro">
+                <h2>How to use</h2>
+                <p class="features-intro">
+                    Simply call <strong>Balloon.css</strong> to your HTML:
+                </p>
+                <div class="demo use-demo">
+                    
+                    <div class="use-link">
+                        <div class="syntax syntax-link">
+                            <code>
+                                &lt;link rel="<span class="attr-value">stylesheet</span>" href="<span class="attr-value">path/to/balloon.css</span>"&gt;
+                            </code>
+                        </div>
+                    </div>
+
+                    <p class="features-intro">
+                        Alternatively, you can use it via CDN (provided by cdnjs):
+                    </p>
+                    <div class="use-url">
+                        <div class="syntax syntax-url">
+                            <code>
+                                &lt;link rel="<span class="attr-value">stylesheet</span>" href="<span class="attr-value">https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css</span>"&gt;
+                            </code>
+                        </div>
+                    </div>
+
+                    <p class="features-intro"> 
+                        And add the attributes data-balloon and data-balloon-pos to your HTML elements:
+                    </p>
+                    <div class="use-span">
+                        <div class="syntax syntax-url">
+                            <code>
+                                &lt;span data-balloon="<span class="attr-value">I'm a tooltip.</span>" data-balloon-pos="<span class="attr-value">up</span>"&gt;<span class="attr-content">Blablabla</span>&lt;/span&gt;
+                            </code>
+                        </div>
+                    </div>
+                        
+                </div>
+            </div>
+
+            <div class="content gap"></div>
+
+            <div class="content drawbacks">
+                <h2>Drawbacks</h2>
+                <p>
+                    Balloon.css make use of pseudo-elements thus self-closing elements such as <strong>&lt;img&gt;</strong>, <strong>&lt;input&gt;</strong> and <strong>&lt;hr&gt;</strong> will not render tooltips.
+                </p>
+                <p>
+                    Also keep in mind that if pseudo elements are already in use on an element, the tooltip will conflict with them resulting in potential bugs.
+                </p>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        Made by Claudio Holanda&nbsp; <span>(@wwwwangxu)</span>
+    </footer>
+</body>
+
+</html>
