@@ -55,10 +55,10 @@
 
 <script id="ch0103/07" type="01_03_07">
     var a = + prompt("a", "1.2");
+    var x = + prompt("x", "2.31");
     var b = + prompt("b", "2");
     var c = + prompt("c", "2");
     var d = + prompt("d","3");
-    var x = + prompt("x", "2.31")
     var f = a * x * x * x + b * x * x + c * x + d;
     console.log(f.toFixed(7));
 </script>
@@ -72,7 +72,7 @@
 <script id="ch0103/09" type="01_03_09">
     var r = + prompt("圆的半径", "3");
     var D = 2 * r;
-    var P = 2 * 3.1419526 * r;
+    var P = 2 * 3.1415926 * r;
     var A = 3.1415926 * r * r;
     console.log(D.toFixed(4), P.toFixed(4), A.toFixed(4));
 </script>
@@ -162,7 +162,7 @@
 
 <!-- ch0104 -->
 
-<scrip010_4 _->t id="ch0104/01" type="01_04_01">
+<scricpt id="ch0104/01" type="01_04_01">
     var N = + prompt("整数N", "1");
     if (N > 0) {
         console.log("positive");
@@ -189,10 +189,10 @@
 <script id="ch0104/03" type="01_04_03">
     var n = + prompt("奇偶数", "5");
     if (n % 2 == 0){
-        console.log(even);
+        console.log("even");
     }
     else {
-        console.log(odd);
+        console.log("odd");
     }
 </script>
 
@@ -223,7 +223,7 @@
 
 <script id="ch0104/06" type="01_04_06">
     var n = + prompt("判断是否为两位数", "54";)
-    if (0 <= n <100) {
+    if ((0 <= n) && (n < 100)) {
         console.log(1);
     }
     else {
@@ -306,7 +306,7 @@
     var Tb = 50 +(s / 3);
     var Tw = s / 1.2;
     if (Tb > Tw) {
-        console.log("Walk")''
+        console.log("Walk");
     }
     else if (Tb < Tw) {
         console.log("Bike");
@@ -331,10 +331,9 @@
 </script>
 
 <script id="ch0104/14" type="01_04_14">
-    debugger
     var x = + prompt("邮件重量", "1200");
     var m = prompt("加急或不加急", "y");
-    var tog =money_x + money_m;
+    var tog = money_x + money_m;
     if (x <= 1000 && m == "y") {
         var money_x = 8;
         var money_m = 5;
@@ -437,15 +436,15 @@
     var x1 = ((-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a)).toFixed(5);
     var x2 = ((-b - Math.sqrt(b * b - 4 * a * c)) / (2 * a)).toFixed(5);
     if (b * b == 4 * a * c) {
-        console.log("x1 =x2 =" + x2);
+        console.log("x1=x2=" + x2);
     }
     else if (b * b > 4 * a * c) {
-       console.log("x1 =" + x1 + ";" + "x2 =" + x2);
+       console.log("x1=" + x1 + ";" + "x2=" + x2);
     }
     else if (b * b < 4 * a * c) {
         var x1 = (-b / (2 * a)).toFixed(5) + "+" + ((Math.sqrt(4 * a * c - b * b )) / (2 * a)).toFixed(5) + "i";
         var x2 = (-b / (2 * a)).toFixed(5) + "-" + ((Math.sqrt(4 * a * c - b * b )) / (2 * a)).toFixed(5) + "i";
-        console.log("x1 =" + x1 + ";" + "x2 =" + x2);
+        console.log("x1=" + x1 + ";" + "x2=" + x2);
     }
 </script>
 
