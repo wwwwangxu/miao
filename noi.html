@@ -331,27 +331,31 @@
 </script>
 
 <script id="ch0104/14" type="01_04_14">
+    debugger
     var x = + prompt("邮件重量", "1200");
     var m = prompt("加急或不加急", "y");
-    var tog = money_x + money_m;
     if (x <= 1000 && m == "y") {
         var money_x = 8;
         var money_m = 5;
+        var tog = money_x + money_m;
         console.log(tog);
     }
     else if(x > 1000 && m == "y") {
-        var money_x = 8 + Math.ceil((x - 1000) / 500)* 4;
+        var money_x = 8 + Math.ceil((x - 1000) / 500) * 4;
         var money_m = 5;
+        var tog = money_x + money_m;
         console.log(tog);
     }
     else if (x <= 1000 && m == "n"){
         var money_x = 8;
         var money_m = 0;
+        var tog = money_x + money_m;
         console.log(tog);
     }
     else if (x > 1000 && m == "n") {
         var money_x = 8 + Math.ceil((x - 1000) / 500) * 4;
         var money_m = 0;
+        var tog = money_x + money_m;
         console.log(tog);   
     }
 </script>
