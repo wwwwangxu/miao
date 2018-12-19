@@ -54,8 +54,8 @@
 </script>
 
 <script id="ch0103/07" type="01_03_07">
-    var a = + prompt("a", "1.2");
     var x = + prompt("x", "2.31");
+    var a = + prompt("a", "1.2");
     var b = + prompt("b", "2");
     var c = + prompt("c", "2");
     var d = + prompt("d","3");
@@ -72,8 +72,8 @@
 <script id="ch0103/09" type="01_03_09">
     var r = + prompt("圆的半径", "3");
     var D = 2 * r;
-    var P = 2 * 3.1415926 * r;
-    var A = 3.1415926 * r * r;
+    var P = 2 * 3.14159 * r;
+    var A = 3.14159 * r * r;
     console.log(D.toFixed(4), P.toFixed(4), A.toFixed(4));
 </script>
 
@@ -162,7 +162,7 @@
 
 <!-- ch0104 -->
 
-<scricpt id="ch0104/01" type="01_04_01">
+<script id="ch0104/01" type="01_04_01">
     var N = + prompt("整数N", "1");
     if (N > 0) {
         console.log("positive");
@@ -222,7 +222,7 @@
 </script>
 
 <script id="ch0104/06" type="01_04_06">
-    var n = + prompt("判断是否为两位数", "54";)
+    var n = + prompt("判断是否为两位数", "54");
     if ((0 <= n) && (n < 100)) {
         console.log(1);
     }
@@ -337,20 +337,23 @@
     if (x <= 1000 && m == "y") {
         var money_x = 8;
         var money_m = 5;
+        console.log(tog);
     }
     else if(x > 1000 && m == "y") {
         var money_x = 8 + Math.ceil((x - 1000) / 500)* 4;
         var money_m = 5;
+        console.log(tog);
     }
     else if (x <= 1000 && m == "n"){
         var money_x = 8;
         var money_m = 0;
+        console.log(tog);
     }
     else {
         var money_x = 8 + Math.ceil((x - 1000) / 500) * 4;
         var money_m = 0;
+        console.log(tog);   
     }
-    console.log(tog);
 </script>
 
 <script id="ch0104/15" type="01_04_15">
