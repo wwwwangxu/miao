@@ -481,25 +481,30 @@
 
 
 <script id="ch0105/02" type="">
-    var bal = 0;
-    for (var i = 0; i < 12; i++)
+    var bal;
+    var sum = 0;
+    for (var i = 0; i < 12; i++) {
         bal += (+ prompt()).toFixed(2);
-    console.log("$" + (bal / 12).toFixed(2));
+        sum += bal;
+    }
+    console.log("$" + (sum / 12).toFixed(2));
 </script>
 
 <script id="ch0105/03" type="">
-    var n = parseInt(+ prompt("样本容量"))；
+    var n = parseInt(prompt("样本容量"))；
     var total = 0;
-    for (var i = 0; i < n; i++)
+    for (var i = 0; i < n; i++) {
         total += (+ prompt()).toFixed(2);
+    }
     console.log((total / n).toFixed(4));
 </script>
 
 <script id="ch0105/04" type="">
-    var n = parseInt(+ prompt());
+    var n = parseInt(prompt());
     var t = 0;
-    for (var i = ; i < n; i++)
+    for (var i = 0; i < n; i++) {
         t += parseInt(+ prompt());
+    }
     console.log(t, (t / n).toFixed(5));
 </script>
 
@@ -819,8 +824,8 @@
         }
     }
     console.log((a * 7 * 7 + b * 7 + c));
-    console.log("" + a + b +c);
-    console.log("" + c + b + a);
+    console.log(Number("" + a + b +c));
+    console.log(Number("" + c + b + a));
 </script>
 
 <script id="ch0105/26" type="">
@@ -875,7 +880,7 @@
         x = Math.floor((n % c) / (c / 10));
         str += (x + " ")
     }
-    console.log(str);
+    console.log(str.substring(0, str.length - 1));
 </script>
 
 <script id="ch0105/29" type="">
@@ -1088,7 +1093,7 @@ debugger;
             }
         }
     }
-    console.log(fx);
+    console.log(fx.substring(0, fx.length - 1));
 </script>
 
 <script id="ch0105/39" type="">
@@ -1177,7 +1182,9 @@ debugger;
                 result += " ";
             }
         }
-        result += "\n";
+        if (y < row_size) {
+            result += "\n";
+        }
     }
     console.log(result);
 </script>
