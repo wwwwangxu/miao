@@ -470,7 +470,7 @@
 
 <!-- ch0105 -->
 
-<script id="ch0105/01" type="">  
+<script id="ch0105/01" type="01_05_01">  
     var n = parseInt(+ prompt("学生人数"));
     var total = 0;
     for (var i = 0; i < n; i++)
@@ -480,18 +480,18 @@
 <!-- copy from cyndra0 -->
 
 
-<script id="ch0105/02" type="">
+<script id="ch0105/02" type="01_05_02">
     var bal;
     var sum = 0;
     for (var i = 0; i < 12; i++) {
-        bal += (+ prompt()).toFixed(2);
+        bal = (+prompt()).toFixed(2);
         sum += bal;
     }
     console.log("$" + (sum / 12).toFixed(2));
 </script>
 
-<script id="ch0105/03" type="">
-    var n = parseInt(prompt("样本容量"))；
+<script id="ch0105/03" type="01_05_03">
+    var n = parseInt(prompt("样本容量"));
     var total = 0;
     for (var i = 0; i < n; i++) {
         total += (+ prompt()).toFixed(2);
@@ -499,7 +499,7 @@
     console.log((total / n).toFixed(4));
 </script>
 
-<script id="ch0105/04" type="">
+<script id="ch0105/04" type="01_05_04">
     var n = parseInt(prompt());
     var t = 0;
     for (var i = 0; i < n; i++) {
@@ -508,7 +508,7 @@
     console.log(t, (t / n).toFixed(5));
 </script>
 
-<script id="ch0105/05" type="">
+<script id="ch0105/05" type="01_05_05">
     var n = parseInt(+ prompt());
     var max_score = 0;
     for (var i = 0; i < n; i++) {
@@ -520,7 +520,7 @@
     console.log(max_score);
 </script>
 
-<script id="ch0105/06" type="">
+<script id="ch0105/06" type="01_05_06">
     var n = parseInt(+prompt());
     var max = 1, min = 1000;
     for (var i = 0; i < n; i++) {
@@ -534,7 +534,7 @@
     console.log(max - min);
 </script>
 
-<script id="ch0105/07" type="">
+<script id="ch0105/07" type="01_05_07">
     var n = +prompt();
     var gold = 0, silver = 0, copper = 0;
     for (var i = 0; i < n; i++) {
@@ -545,7 +545,7 @@
     console.log(gold, silver, copper, (gold + silver + copper));
 </script>
 
-<script id="ch0105/08" type="">
+<script id="ch0105/08" type="01_05_08">
     var n = +prompt();
     var sum = (n-2) * 180;
     var sm_angle = 0;
@@ -555,7 +555,7 @@
     console.log(sum - sm_angle)
 </script>
 
-<script id="ch0105/09" type="">
+<script id="ch0105/09" type="01_05_09">
     var m = +prompt("m的值", "7");
     var n = +prompt("n的值", "15");
     var sum = 0;
@@ -567,7 +567,7 @@
     console.log(sum);
 </script>                                          
 
-<script id="ch0105/10" type="">
+<script id="ch0105/10" type="01_05_10">
     var m = +prompt("m", "50");
     var n = +prompt("n", "85");
     var sum = 0;
@@ -579,7 +579,7 @@
     console.log(sum)
 </script>
 
-<script id="ch0105/11" type="">
+<script id="ch0105/11" type="01_05_11">
     var k = +prompt("k个正整数", "5")
     var a = 0, b = 0, c = 0;
     var j;
@@ -598,7 +598,7 @@
     console.log(c);
 </script>
 
-<script id="ch0105/12" type="">
+<script id="ch0105/12" type="01_05_12">
     var N = +prompt();
     var m = +prompt();
     var counter = 0;
@@ -611,7 +611,7 @@
     console.log(counter);
 </script>
 
-<script id="ch0105/13" type="">
+<script id="ch0105/13" type="01_05_13">
     var a = +prompt();
     var n = +prompt();
     var result = 1;
@@ -621,7 +621,7 @@
     console.log(result);
 </script>
 
-<script id="ch0105/14" type="">
+<script id="ch0105/14" type="01_05_14">
     var x = +prompt();
     var n = +prompt();
     var result = x;
@@ -631,7 +631,7 @@
     console.log((result).toFixed(4));
 </script>
 
-<script id="ch0105/15" type="">
+<script id="ch0105/15" type="01_05_15">
     var R = parseInt(prompt());
     var M = parseInt(prompt());
     var Y = parseInt(prompt());
@@ -642,7 +642,7 @@
     
 </script>
 
-<script id="ch0105/16" type="">
+<script id="ch0105/16" type="01_05_16">
     var N = +prompt();
     var K = +prompt();
     var sum = N;
@@ -662,7 +662,7 @@
     }
 </script>
 
-<script id="ch0105/17" type="">
+<script id="ch0105/17" type="01_05_17">
     var k = parseInt(prompt("K","19"));
     var x = 1, y = 1;
     var ak;
@@ -679,7 +679,7 @@
     
 </script>
 
-<script id="ch0105/18" type="">
+<script id="ch0105/18" type="01_05_18">
     var n = parseInt(prompt());
     var result_x, result_y;
     x1 = +prompt("总病例数");
@@ -699,7 +699,7 @@
     }
 </script>
 
-<script id="ch0105/19" type="">
+<script id="ch0105/19" type="01_05_19">
     var n = parseInt(prompt());
     var x, y, p, h = 0;
     for (i=0; i<n; i++) {
@@ -711,7 +711,7 @@
     console.log(Math.ceil(h));
 </script>
 
-<script id="ch0105/20" type="">
+<script id="ch0105/20" type="01_05_20">
     var h = parseInt(prompt());
     var s = h; //反弹高度
     var x = 0;  //经过的米数
@@ -723,7 +723,7 @@
     console.log(s.toFixed(7));
 </script>
 
-<script id="ch0105/21" type="">
+<script id="ch0105/21" type="01_05_21">
     var n = parseInt(prompt());
     while (n != 1) {
         if (!(n%2)) {
@@ -738,7 +738,7 @@
         
 </script>
 
-<script id="ch0105/22" type="">
+<script id="ch0105/22" type="01_05_22">
     var m = 300;  //月初可支配的金额
     var n; //预算
     var s = 0;  //每月存储金额
@@ -765,7 +765,7 @@
     console.log( k ? (-k) : (sum * 1.2 + y));
 </script>
 
-<script id="ch0105/23" type="">
+<script id="ch0105/23" type="01_05_23">
     var m = +prompt();
     var n = +prompt();
     var h;
@@ -783,7 +783,7 @@
     console.log(x)
 </script>
 
-<script id="ch0105/24" type="">
+<script id="ch0105/24" type="01_05_24">
     debugger;
     var n = +prompt();
     var a;
@@ -807,8 +807,7 @@
     console.log((max_h > sum) ? max_h : sum);
 </script>
 
-<script id="ch0105/25" type="">
-    debugger;
+<script id="ch0105/25" type="01_05_25">
     var a = 0;
     var b = 0;
     var c = 0;
@@ -828,7 +827,7 @@
     console.log(Number("" + c + b + a));
 </script>
 
-<script id="ch0105/26" type="">
+<script id="ch0105/26" type="01_05_26">
     var n = +prompt();
     var x;
     var a;
@@ -849,7 +848,7 @@
     console.log(y);
 </script>
 
-<script id="ch0105/27" type="">
+<script id="ch0105/27" type="01_05_27">
     var k = +prompt();
     var n = 1;
     var s = 0;
@@ -861,7 +860,7 @@
 
 </script>
 
-<script id="ch0105/28" type="">
+<script id="ch0105/28" type="01_05_28">
     var n = +prompt();
     var a = 10;
     var y = 1; //n 共有y 位数；
@@ -883,7 +882,7 @@
     console.log(str.substring(0, str.length - 1));
 </script>
 
-<script id="ch0105/29" type="">
+<script id="ch0105/29" type="01_05_29">
     var n = +prompt();
     var a = 10;
     var y = 1; 
@@ -916,7 +915,7 @@
   
 </script>
 
-<script id="ch0105/30" type="">
+<script id="ch0105/30" type="01_05_30">
     var m = +prompt();
     var k = +prompt();
     var a = 10;
@@ -946,7 +945,7 @@
     }
 </script>
 
-<script id="ch0105/31" type="">
+<script id="ch0105/31" type="01_05_31">
     var n = +prompt();
     var m = +prompt();
     var k;
@@ -971,7 +970,7 @@
     console.log(str.substring(0, str.length -1));
 </script>
 
-<script id="ch0105/32" type="">
+<script id="ch0105/32" type="01_05_32">
     var n = +prompt();
     var x = 1;
     var y = 1;
@@ -988,7 +987,7 @@
     console.log(sn.toFixed(4));
 </script>
 
-<script id="ch0105/33" type="">
+<script id="ch0105/33" type="01_05_33">
     var n = +prompt();
     var sn = 0;
     var x = 0;
@@ -1004,7 +1003,7 @@
     console.log(sn.toFixed(4));
 </script>
 
-<script id="ch0105/34" type="">
+<script id="ch0105/34" type="01_05_34">
 debugger;
     var n = +prompt();
     var sn = 0;
@@ -1021,7 +1020,7 @@ debugger;
     console.log(sn);
 </script>
 
-<script id="ch0105/35" type="">
+<script id="ch0105/35" type="01_05_35">
     var n = +prompt();
     var e = 1;
     var x;
@@ -1039,7 +1038,7 @@ debugger;
     console.log(e.toFixed(10));
 </script>
 
-<script id="ch0105/36" type="">
+<script id="ch0105/36" type="01_05_36">
     var x = (+prompt()).toFixed(1);
     var n = +prompt();
     var sn = 0;
@@ -1053,7 +1052,7 @@ debugger;
     }
     console.log(sn.toFixed(2));
 </script>
-<script id="ch0105/37" type="">
+<script id="ch0105/37" type="01_05_37">
     var m = +prompt(); //体力最大值
     var n = +prompt(); //初始战斗力
     var x = +prompt(); //能量元素最大值
@@ -1075,7 +1074,7 @@ debugger;
 
 </script>
 
-<script id="ch0105/38" type="">
+<script id="ch0105/38" type="01_05_38">
     var n = +prompt();
     var c;
     var fx = "";
@@ -1083,7 +1082,7 @@ debugger;
     for (var i = 0; i <= n; i++) {
         c = +prompt();
         if (n == 0) {
-            fx = 0;
+            fx += 0 + " ";
         } else {
             if (i == n) {
                 fx += "";
@@ -1096,7 +1095,7 @@ debugger;
     console.log(fx.substring(0, fx.length - 1));
 </script>
 
-<script id="ch0105/39" type="">
+<script id="ch0105/39" type="01_05_39">
     var n = +prompt();
     var sn = 0;
     var x = 0; //与7无关的数
@@ -1110,7 +1109,7 @@ debugger;
     console.log(sn);
 </script>
 
-<script id="ch0105/40" type="">
+<script id="ch0105/40" type="01_05_40">
     var n = +prompt();
     var a = 10;
     var m = 1;
@@ -1138,7 +1137,7 @@ debugger;
 
 </script>
 
-<script id="ch0105/41" type="">
+<script id="ch0105/41" type="01_05_41">
     var L = +prompt();
     var R = +prompt();
     var sum = 0;
@@ -1166,7 +1165,7 @@ debugger;
     }
     console.log(sum);
 </script>
-<script id="ch0105/42" type="">
+<script id="ch0105/42" type="01_05_42">
     var row_size = +prompt(); //矩形的高
     var col_size = +prompt(); //矩形的宽
     var sign = prompt(); //构成符号
@@ -1189,7 +1188,7 @@ debugger;
     console.log(result);
 </script>
 
-<script id="ch0105/43" type="">
+<script id="ch0105/43" type="01_05_43">
     var n = +prompt();
     var a = 0;
     var b;
@@ -1214,7 +1213,7 @@ debugger;
     console.log(max_count);
 </script>
 
-<script id="ch0105/44" type="">
+<script id="ch0105/44" type="01_05_44">
     var n = +prompt();
     var sum = 0;
     var x = 0;
@@ -1238,7 +1237,7 @@ debugger;
     console.log(result);
 </script>
 
-<script id="ch0105/45" type="">
+<script id="ch0105/45" type="01_05_45">
     var n = +prompt();
     var sum = 0; // 获得的总金币数
     var date = 1;
