@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>画图</title>
+  <style>
+    canvas {
+      border: 2px solid #f0f;
+      display: block;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <canvas width="400" height="300"></canvas>
+</body>
+<script>
+  var canvas = document.querySelector('canvas')
+  canvas.style.imageRendering = 'pixelated'
+  var ctx = canvas.getContext('2d')
+
+  function dot(x, y, color = 'black') {
+    ctx.fillStyle = color
+    ctx.fillRect(x, y, 1, 1)
+  }
+  /**
+   * YOUR TASK
+画图的题：
+画一条实线
+画一条一个实点一个空点的虚线
+画一条两个实点两个空点的虚线
+画一条三个实点两个空点的虚线
+画一条45度的斜线
+画一条跨越画布左上角和右下角的对角线
+画一个空心矩形
+画一个实心矩形
+画一个rgb色彩空间的某一面
+画一个空心的圆
+画一个实心的圆
+画一个大小合适的sin(x)的图像
+   */
+</script>
+<script>
+  // YOUR CODE GOES BELOW
+
+  //实线
+  for (var i = 0; i < 400; i++) {
+    var a = i;
+    dot (a, 10);
+  }
+  
+  //一个实点一个空点的虚线
+  for (var i = 0; i < 200; i++) {
+    var b = (2 * i - 1) ;
+    dot (b, 20);
+  }
+
+  //两个实点两个空点的虚线
+  for (var i = 0; i < 100; i++) {
+    var c = (4 * i + 1), d = (4 * i + 2);
+    dot (c, 30);
+    dot (d, 30);
+  }
+  
+  //画一条三个实点两个空点的虚线
+  for (var i = 0; i < 80; i++) {
+    var e = (5 * i + 1), f = (5 * i + 2); g = (5 * i + 3); 
+    dot (e, 40);
+    dot (f, 40);
+    dot (g, 40);
+  }
+
+  //45度的斜线
+  for (var i = 0; i <= 300; i++) {
+    var x1 = i, y1 = i;
+    dot (x1, y1);
+  }
+
+  //一条跨越画布左上角和右下角的对角线
+  for (var i = 0; i <= 400; i++) {
+    var x2 = i, y2 = (3 * i) / 4 ;
+    dot (x2, y2);
+  }
+
+  //画一个空心矩形
+  for (var i = 0; i <=70; i++) {
+    var react_x1 = 200 + i;
+    var react_y1 = 60 + ( (3 * i) / 7);
+    dot (react_x1, 60);
+    dot (200, react_y1);
+    dot (react_x1, 90);
+    dot (270, react_y1);
+  }
+  
+  //画一个实心矩形
+  for (var i = 0; i <=70; i++) {
+    var react_x2 = 200 + i;
+    for (var j = 0; j <= 30; j++) {
+      var react_y2 = 110 + j;
+      dot (react_x2, react_y2);
+    }
+  }
+
+  //画一个rgb色彩空间的某一面
+  for (var i = 0; i <= 255; i++) {
+    var rgb_x = (300 + (i / 3));
+    var color_g = (255 - i) ;
+    for (var j = 0; j <= 255; j++) {
+      var rgb_y = 60 + (j / 3);
+      var color_r =(255 - j);
+      dot (rgb_x, rgb_y, "rgb(" + color_r +"," + color_g + ",255)");
+    }
+  }
+
+  //画一个空心的圆
+  for (var i = 0; i <= 60; i++) {
+    var circle_x = (70 + i);
+    var circle_as = Math.sqrt((900 - (circle_x - 100) * (circle_x - 100)));
+    var circle_y1, circle_y2 ;
+    if (i >= 30) {
+      circle_y1 = circle_as + 100;
+      circle_y2 = 100 - circle_as;
+    } else {
+      circle_y1= 100 - circle_as;
+      circle_y2 = circle_as + 100;
+    }
+    dot (circle_x, circle_y1);
+    dot (circle_x, circle_y2);
+    dot (circle_y1, circle_x);
+    dot (circle_y2, circle_x);
+  }
+  
+  //画一个实心的圆
+  for (var i = 0; i <= 80; i++) {
+    var disc_x = (60 + i);
+    var disc_y;
+    var disc_as = Math.sqrt((1600 - (disc_x - 100) * (disc_x - 100)));
+    var k = disc_as + 200;
+    for (var j = (200 - disc_as); j <= k; j++) {
+      disc_y = j;
+      dot (disc_x, disc_y);
+      dot (disc_y - 100, disc_x + 100);
+    }
+  }
+
+  //画一个大小合适的sin(x)的图像
+ for (var i = 1; i <= 400; i++) {
+   var sx = i;
+   var sy = (20 * Math.sin((Math.PI / 25) * sx)) + 265;
+   dot (sx, sy);
+ }
+</script>
+</html>                                                   

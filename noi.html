@@ -1215,13 +1215,13 @@ debugger;
 
 <script id="ch0105/44" type="01_05_44">
     var n = +prompt();
-    var sum = 0;
+    var sum = 0;  
     var x = 0;
     var y;
     var a;
     var result;
     while (sum < n) {
-        x += 1;
+        x += 1; // 自然数依次递增
         y = 0
     for (var i = 1; i <= x; i++) {
         a = i;
@@ -1230,9 +1230,9 @@ debugger;
         }
     }
     if (y == (x + 1)) {
-        sum += 1;
+        sum += 1; // 判断 x 是第几个质数
         result = x;
-    }
+    } //判断 x 是否为质数
     }
     console.log(result);
 </script>
