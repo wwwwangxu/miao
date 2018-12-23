@@ -484,17 +484,17 @@
     var bal;
     var sum = 0;
     for (var i = 0; i < 12; i++) {
-        bal = (+prompt()).toFixed(2);
+        bal = +prompt();
         sum += bal;
     }
     console.log("$" + (sum / 12).toFixed(2));
 </script>
 
 <script id="ch0105/03" type="01_05_03">
-    var n = parseInt(prompt("样本容量"));
+    var n = +prompt("样本容量");
     var total = 0;
     for (var i = 0; i < n; i++) {
-        total += (+ prompt()).toFixed(2);
+        total += +prompt();
     }
     console.log((total / n).toFixed(4));
 </script>
