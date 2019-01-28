@@ -196,10 +196,11 @@ var wwwwangxu = function() {
 
     function join(ary, separator) {
         let res = "";
+        let tmp = "" + separator;
         let len = ary.length;
         for (let i = 0; i < len; i++) {
             if(i < len - 1) {
-                res += ary[i] + separator;
+                res += ary[i] + tmp;
             } else {
                 res += ary[i];
             }
