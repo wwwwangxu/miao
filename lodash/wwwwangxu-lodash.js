@@ -88,10 +88,172 @@ var wwwwangxu = function() {
         return ary;
     }
 
-    
+    function fill(ary, val, start = 0, end = ary.length) {
+        for (let i = start; i < end; i++) {
+            ary[i] = val;
+        }
+        return ary;
+    }
 
+    /*
+    function findIndex(ary, predicate, fromIndex = 0) {
+        let fn;
+        if (typeof predicate == "function") {
+            fn = predicate;
+        } else if () {
 
+        }
 
+        for (let i = 0; i < ary.length; i++) {
+            if (ary[i])
+        }
+    }
+    */
+
+    function flatten(ary) {
+        let res = [];
+        for (let val of ary) {
+            if (Array.isArray(val)) {
+                res.push(...val);
+            } else {
+                res.push(val);
+            }
+        }
+        //return [].concat(...ary)
+        return res;
+    }
+
+    function flattenDeep(ary) {
+        let res = [];
+        for (let val of ary) {
+            if (Array.isArray(val)) {
+                res.push(...flattenDeep(val));
+            } else {
+                res.push(val);
+            }
+        }
+        return res;
+    }
+
+    function flattenDepth(ary, depth = 1) {
+        let res = [];
+        if (depth == 0) {
+            return ary;
+        }
+        for (let val of ary) {
+            if (Array.isArray(val)) {
+                res.push(...flattenDepth(val, depth - 1));
+            } else {
+                res.push(val);
+            }
+        }
+        return res;
+    }
+
+    function fromPairs(pairs) {
+        let map = {};
+        for (let pair of pairs) {
+            let key = pair[0];
+            let val = pair[1];
+            map[key] = val;
+        }
+        return map;
+    }
+
+    function head(ary) {
+        return ary[0];
+    }
+
+    function indexOf(ary, val, fromIndex = 0) {
+        let len = ary.length;
+        for (let i = fromIndex; i < len; i++) {
+            if (ary[i] == val) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    function initial(ary) {
+        let res = [];
+        let t = ary.length - 1;
+        for (let i = 0; i < t; i++) {
+            res.push(ary[i]);
+        }
+        return res;
+    }
+
+    function intersection(...ary) {
+        let set = new Set(ary[0]);
+        let res = [];
+        ary[1].forEach(it => {
+            if (set.has(it)) {
+                res.push(it);
+            }
+        })
+        return res;
+    }
+
+    function join(ary, separator) {
+        let res = "";
+        let len = ary.length;
+        for (let i = 0; i < len; i++) {
+            if(i < len - 1) {
+                res += ary[i] + separator;
+            } else {
+                res += ary[i];
+            }
+        }
+        return res;
+    }
+
+    function last(ary) {
+        return ary[ary.length - 1];
+    }
+
+    function lastIndexOf(ary, val, fromIndex = ary.length -1) {
+        for (let i = fromIndex; i >= 0; i--) {
+            if(ary[i] == val) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    function pull(ary, ...valAry) {
+        let set = new Set(valAry);
+        ary =  remove(ary, function(it) {
+            return set.has(it)
+        });
+        return ary;
+    }
+
+    function remove(ary, predicate) {
+        let res = [];
+        for (let item of ary) {
+            if (!predicate(item)) {
+                res.push(item);
+            }
+        } 
+        return res;
+    }
+
+    function reverse(ary) {
+        let res = [];
+        for (let val of ary) {
+            res.unshift(val);
+        }
+        return res;
+    }
+
+    function sortedIndex(ary, val) {
+        for (let i= 0; i < ary.length; i++) {
+            if (ary[i] >= val) {
+                return i;
+            }
+        }
+        return ary.length; 
+    }
 
     return {
         chunk: chunk,
@@ -100,7 +262,22 @@ var wwwwangxu = function() {
         differenceBy: differenceBy,
         drop: drop,
         dropRight: dropRight,
-
+        fill: fill,
+        flatten: flatten,
+        flattenDeep: flattenDeep,
+        flattenDepth: flattenDepth,
+        fromPairs: fromPairs,
+        head: head,
+        indexOf: indexOf,
+        initial: initial,
+        intersection: intersection,
+        join: join,
+        last: last,
+        lastIndexOf: lastIndexOf,
+        pull: pull,
+        reverse: reverse,
+        sortedIndex: sortedIndex,
+        remove: remove,
 
     }
 }();
